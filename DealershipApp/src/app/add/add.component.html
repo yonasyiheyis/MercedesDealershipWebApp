@@ -1,0 +1,68 @@
+<form class="example-form" [formGroup]='carForm' (ngSubmit)='addCar()'>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>brand</mat-label>
+        <input matInput placeholder="00" formControlName='brand' type="string">       
+        <mat-hint>Enter Car brand</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>model</mat-label>
+          <input matInput placeholder="" formControlName='model' type="string">       
+          <mat-hint>Enter Car model</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>year</mat-label>
+          <input matInput placeholder="00" formControlName='year' type="number">       
+          <mat-hint>Enter Car year</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>type</mat-label>
+          <input matInput placeholder="00" formControlName='type' type="string">       
+          <mat-hint>Enter Car type</mat-hint>
+        </mat-form-field>
+      </p>
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Price</mat-label>
+          <input matInput placeholder="00" formControlName='price' type="number">       
+          <mat-hint>Enter Car Price</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>engine</mat-label>
+          <input matInput placeholder="00" formControlName='engine' type="string">       
+          <mat-hint>Enter Car engine</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>transmission</mat-label>
+          <input matInput placeholder="00" formControlName='transmission' type="string">       
+          <mat-hint>Enter Car Price</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>color</mat-label>
+          <input matInput placeholder="00" formControlName='color' type="string">       
+          <mat-hint>Enter Car color</mat-hint>
+        </mat-form-field>
+      </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Picture Url</mat-label>
+        <input matInput placeholder="http:" formControlName='picUrl' >
+        
+        <mat-hint>Enter Picture Url</mat-hint>
+      </mat-form-field>
+    </p>
+  
+    <button mat-raised-button color="primary" type='submit' [disabled]='carForm.invalid' >AddCar</button>
+  </form>
