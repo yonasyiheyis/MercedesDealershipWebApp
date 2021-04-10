@@ -1,0 +1,14 @@
+
+.admin-page-container{
+
+}
+
+.car-list{
+    display: grid;
+ grid-template-columns: auto auto auto;
+}
+
+.car-image img {
+    width: 400px;
+    height: 200px;
+}
