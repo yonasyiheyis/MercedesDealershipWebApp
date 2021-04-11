@@ -13,7 +13,7 @@ var adminRouter = require('./routes/admin');
 var authRouter = require('./routes/auth')
 
 
-const uri ="mongodb+srv://sami:<password>@cluster0.jizzk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const uri = "mongodb+srv://sami:<password>@cluster0.jizzk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
@@ -24,7 +24,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 const Port = process.env.PORT || 5000
+
+
 
 
 let DB = null;
@@ -61,7 +64,4 @@ app.use(function (err, req, res, next) {
   res.status(404).json({ msg: `Page not found!!! ${err}` })
 });
 
-app.listen(Port,()=>{
-  console.log(`node avaliable${Port}`)
-  })
 module.exports = app;
