@@ -1,9 +1,10 @@
 <div class="admin-page-container">
 
-    <div class="add-car">   
-         <a mat-raised-button color="primary" [routerLink]="['/add']">Add Cars</a>
-    </div>
-      
+  <div class="add-car">
+    <a mat-raised-button color="primary" [routerLink]="['/addcar']">Add Cars</a>
+  </div>
+
+
   <div class="car-list">
     <div class="car-image"></div>
     <div class="car-detail"></div>
@@ -11,12 +12,13 @@
     <div class="car-action"></div>
   </div>
   <div class="car-list" *ngFor="let car of carsList">
-     <div class="car-image">
+    <div class="car-image">
 
-        <img [src]="car.pictureUrl" alt="" srcset="">
+      <img [src]="car.pictureUrl" alt="" srcset="">
 
     </div>
     <div class="car-detail">
+
            
         <p>price:{{car.price}}</p>
         <p>year:{{car.year}} 
@@ -31,6 +33,8 @@
             
         <button mat-raised-button color="warning" >Delete</button>
        
+
+
     </div>
   </div>
 </div>
