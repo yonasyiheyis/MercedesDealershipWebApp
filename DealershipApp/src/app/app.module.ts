@@ -12,10 +12,21 @@ import { MatButtonModule } from '@angular/material/button';
 import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
 import { AddComponent } from './add/add.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, AdminComponent, AddComponent],
+  declarations: [AppComponent, AdminComponent, AddComponent, SignupComponent, LoginComponent,HomeComponent],
   imports: [
+    HttpClientModule,
+    RouterModule.forRoot([{path:'',component:HomeComponent},
+    {path:'login',component:LoginComponent},
+    {path:'signup',component:SignupComponent},
+    {path:'admin',component:AdminComponent},
+    {path:'addcar',component:AddComponent}]),
     BrowserModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
@@ -28,4 +39,6 @@ import { AddComponent } from './add/add.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+
+}

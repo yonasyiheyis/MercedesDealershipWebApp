@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarService } from '../car.service';
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  public carsList=[]
+
+  constructor(public service:CarService) { }
 
   ngOnInit(): void {
-  }
+    this.service.getcars().subscribe((cars:any)=>{
 
+      this.carsList = cars
+
+    })
+  }
+    
 }

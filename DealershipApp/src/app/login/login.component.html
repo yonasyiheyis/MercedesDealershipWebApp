@@ -1,0 +1,23 @@
+<form class="example-form" [formGroup]='loginForm' (ngSubmit)='logIn()'>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="00" formControlName='email' type="email">       
+        <mat-hint>Enter Email</mat-hint>
+      </mat-form-field>
+    </p>
+   
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>password</mat-label>
+          <input matInput placeholder="00" formControlName='password' type="password">       
+          <mat-hint>Enter password</mat-hint>
+        </mat-form-field>
+      </p>
+     
+  
+    <button mat-raised-button color="primary" type='submit' [disabled]='loginForm.invalid' >Login</button>
+  </form>
+   <p>if you don't have account ,you have to</p>
+  <a mat-raised-button color="primary" [routerLink]="['/signup']">register</a>
+
