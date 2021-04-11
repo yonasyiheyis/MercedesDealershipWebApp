@@ -13,7 +13,7 @@ export class AdminComponent implements OnInit {
   constructor(public service:CarService) { }
 
   ngOnInit(): void {
-    this.service.getcars().subscribe((cars:any)=>{
+    this.service.getCars().subscribe((cars:any)=>{
 
       this.carsList = cars
 

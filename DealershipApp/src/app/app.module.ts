@@ -17,16 +17,20 @@ import { RouterModule } from '@angular/router';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { EditComponent } from './edit/edit.component';
+
 
 @NgModule({
-  declarations: [AppComponent, AdminComponent, AddComponent, SignupComponent, LoginComponent,HomeComponent],
+  declarations: [AppComponent, AdminComponent, AddComponent, SignupComponent, LoginComponent,HomeComponent, EditComponent],
   imports: [
     HttpClientModule,
     RouterModule.forRoot([{path:'',component:HomeComponent},
     {path:'login',component:LoginComponent},
     {path:'signup',component:SignupComponent},
     {path:'admin',component:AdminComponent},
-    {path:'addcar',component:AddComponent}]),
+    {path:'add',component:AddComponent},
+    {path:'edit',component:EditComponent},
+  ]),
     BrowserModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
