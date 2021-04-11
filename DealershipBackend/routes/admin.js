@@ -2,8 +2,13 @@ var express = require('express');
 var router = express.Router();
 
 /* GET inventory listing for admin. */
-router.get('/', function (req, res, next) {
-    res.send('respond with a resource');
-});
+const adminController = require('../controllers/admin')
+
+
+
+
+router.post('/cars/', adminController.addCar)
+
+router.patch('/cars/', adminController.updateCar)
 
 module.exports = router;
