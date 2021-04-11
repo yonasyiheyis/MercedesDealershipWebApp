@@ -23,7 +23,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-const Port = process.env.PORT || 3000
 
 
 let DB = null;
@@ -60,7 +59,4 @@ app.use(function (err, req, res, next) {
   res.status(404).json({ msg: `Page not found!!! ${err}` })
 });
 
-app.listen(Port, () => {
-  console.log(`node avaliable${Port}`)
-})
 module.exports = app;

@@ -11,15 +11,15 @@ content-type: application/json
 
 {
     "brand": "Mercedes",
-    "model": "a220",
+    "model": "cla",
     "type": "sedan",
-    "year": "2021",
-    "price": "39000",
-    "engine": "2.0L inline-4 turbo",
-    "transmission": "automatic",
-    "color": "white",
-    "mpg": "25",
-    "pictureUrl": "https://s.aolcdn.com/commerce/autodata/images/USC90MBCCC1A021001.jpg"
+    "year": "2016",
+    "price": "25000",
+    "engine": "2.0L inline-4",
+    "transmission": "manual",
+    "color": "brown",
+    "mpg": "27",
+    "pictureUrl": "https://blogmedia.dealerfire.com/wp-content/uploads/sites/634/2019/01/Color-Options-for-the-2019-Mercedes-Benz-CLA-Coupe-b8_o.jpg"
 }
 ###
 
