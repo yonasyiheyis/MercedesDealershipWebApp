@@ -5,10 +5,7 @@ var router = express.Router();
 const adminController = require('../controllers/admin')
 
 
-
-
 router.post('/cars/', adminController.addCar)
-
 router.patch('/cars/', adminController.updateCar)
 
 router.get('/', adminController.getAll);
