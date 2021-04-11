@@ -53,6 +53,20 @@ content-type: application/json
     "email":{"sam@gmail.com"},
     "password":{"sami"}
 }
+
+###
+
+POST http://localhost:3000/users/add HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "marie",
+    "lastName": "curie",
+    "email": "marie@gmail.com",
+    "password": "mmaarriiee",
+    "role": "client",
+    "address": "54th ST"
+}
  
    
 ###
