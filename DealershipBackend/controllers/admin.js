@@ -9,6 +9,8 @@ module.exports.getAll = async function (req, res) {
     }) 
 }
 
+
+
 module.exports.getOne = async function (req, res) {
    
   
@@ -37,3 +39,4 @@ module.exports.deleteById = async function(req,res) {
     }
 
     )}
+ 
