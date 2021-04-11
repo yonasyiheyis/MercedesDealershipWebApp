@@ -2,22 +2,29 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
+const cors = require('cors')
+
 const { MongoClient } = require('mongodb');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var adminRouter = require('./routes/admin');
 
-const uri = "mongodb+srv://yonas:mwaprojectyonas@cluster0.jizzk.mongodb.net/Dealership?retryWrites=true&w=majority"
+
+const uri = "mongodb+srv://sami:<password>@cluster0.jizzk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
 var app = express();
-
+app.use(cors())
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+const Port = process.env.PORT || 3000
+
 
 let DB = null;
 // DB added to request
@@ -41,6 +48,7 @@ app.use(async (req, res, next) => {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
+//app.use('/', authRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -52,4 +60,7 @@ app.use(function (err, req, res, next) {
   res.status(404).json({ msg: `Page not found!!! ${err}` })
 });
 
+app.listen(Port, () => {
+  console.log(`node avaliable${Port}`)
+})
 module.exports = app;

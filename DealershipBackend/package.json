@@ -3,17 +3,29 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "move": "nodemon app.js"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
+    "cores": "^0.8.5",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
+    "express": "^4.16.4",
     "http-errors": "~1.6.3",
-    "mongodb": "^3.6.6",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.5",
+    "mongoose": "^5.12.3",
     "morgan": "~1.9.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
-  }
+  },
+  "main": "app.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
