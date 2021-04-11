@@ -27,6 +27,7 @@ module.exports.updateCar = async function (req, res) {
         if (err) throw err;
     })
     res.json({ 'ok': `Updated car ${req.body.model}` })
+<<<<<<< Updated upstream
 }
 const { ObjectID } = require("bson")
 
@@ -68,3 +69,6 @@ module.exports.deleteById = async function (req, res) {
 
     )
 }
+=======
+}
+>>>>>>> Stashed changes

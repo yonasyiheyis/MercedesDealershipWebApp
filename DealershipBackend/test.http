@@ -11,6 +11,7 @@ content-type: application/json
 
 {
     "brand": "Mercedes",
+<<<<<<< Updated upstream
     "model": "cla",
     "type": "sedan",
     "year": "2016",
@@ -20,6 +21,17 @@ content-type: application/json
     "color": "brown",
     "mpg": "27",
     "pictureUrl": "https://blogmedia.dealerfire.com/wp-content/uploads/sites/634/2019/01/Color-Options-for-the-2019-Mercedes-Benz-CLA-Coupe-b8_o.jpg"
+=======
+    "model": "a220",
+    "type": "sedan",
+    "year": "2021",
+    "price": "39000",
+    "engine": "2.0L inline-4 turbo",
+    "transmission": "automatic",
+    "color": "white",
+    "mpg": "25",
+    "pictureUrl": "https://s.aolcdn.com/commerce/autodata/images/USC90MBCCC1A021001.jpg"
+>>>>>>> Stashed changes
 }
 ###
 
@@ -41,6 +53,7 @@ content-type: application/json
 
 ###
 
+<<<<<<< Updated upstream
 //DELETE http://localhost:7000/users/2
 DELETE http://localhost:3000/clear HTTP/1.1
 
@@ -86,3 +99,6 @@ content-type: application/json
 
 ###
 DELETE http://localhost:3000/admin/60724748e622882db858dda3           HTTP/1.1
+=======
+//DELETE http://localhost:7000/users/2
+>>>>>>> Stashed changes

@@ -1,40 +1,33 @@
 <div class="admin-page-container">
 
-  <div class="add-car">
-    <a mat-raised-button color="primary" [routerLink]="['/addcar']">Add Cars</a>
-  </div>
-
-
-  <div class="car-list">
-    <div class="car-image"></div>
-    <div class="car-detail"></div>
-
-    <div class="car-action"></div>
-  </div>
-  <div class="car-list" *ngFor="let car of carsList">
-    <div class="car-image">
-
-      <img [src]="car.pictureUrl" alt="" srcset="">
-
-    </div>
-    <div class="car-detail">
-
-           
-        <p>price:{{car.price}}</p>
-        <p>year:{{car.year}} 
-            </p>
-        <p>mpg:{{car.mpg}}</p> 
-        
-    </div> 
-          
-    <div class="car-action">
-            
-        <button mat-raised-button color="primary" [routerLink]="['/edit']" [state] ="{body:car}" >Edit</button>
-            
-        <button mat-raised-button color="warning" >Delete</button>
-       
-
-
-    </div>
-  </div>
+  <<<<<<< Updated upstream=======<<<<<<< HEAD <div class="add-car">
+    <a mat-raised-button color="primary" [routerLink]="['/add']">Add Cars</a>
 </div>
+
+=======
+>>>>>>> Stashed changes
+
+
+<<<<<<< Updated upstream=======>>>>>>> 6d52105 (add and update cars added)
+  >>>>>>> Stashed changes
+
+  <<<<<<< Updated upstream=======<<<<<<< HEAD>>>>>>> Stashed changes
+
+    <<<<<<< Updated upstream==============<p>price:{{car.price}}</p>
+      <p>year:{{car.year}}
+      </p>
+      <p>mpg:{{car.mpg}}</p>
+
+      </div>
+
+      <div class="car-action">
+
+        <button mat-raised-button color="primary">Update</button>
+
+        <button mat-raised-button color="warning">Delete</button>
+
+        >>>>>>> 6d52105 (add and update cars added)
+        >>>>>>> Stashed changes
+      </div>
+      </div>
+      </div>

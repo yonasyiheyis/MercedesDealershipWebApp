@@ -3,6 +3,16 @@ var router = express.Router();
 
 /* GET inventory listing for admin. */
 const adminController = require('../controllers/admin')
+<<<<<<< Updated upstream
+=======
+
+
+
+
+router.post('/cars/', adminController.addCar)
+
+router.patch('/cars/', adminController.updateCar)
+>>>>>>> Stashed changes
 
 
 router.post('/cars/', adminController.addCar)
