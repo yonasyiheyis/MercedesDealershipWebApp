@@ -10,9 +10,9 @@ export class AddComponent implements OnInit {
 
   public carForm:any
   constructor(public fb:FormBuilder,public service:CarService){}
-
+   
   ngOnInit(){
-this.carForm = this.fb.group({
+   this.carForm = this.fb.group({
   brand:['',Validators.required],  
   model:['',Validators.required] ,  
   type:['',Validators.required],
@@ -27,7 +27,6 @@ this.carForm = this.fb.group({
 
 })
 
-
   }
 
   title = 'DealershipApp';
@@ -37,7 +36,11 @@ this.carForm = this.fb.group({
 
     console.log(this.carForm.value)
     this.service.addcars(this.carForm.value).subscribe(data=>{
-      
+     /*  onSubmit(){
+    this.subscription = this.data.postCars(this.carsForm.value).subscribe(response=>
+      alert("successful submitted"))
+      this.route.navigate(['/cars/get'])
+  } */ 
     })
   }
 
