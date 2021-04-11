@@ -31,16 +31,16 @@ export class CarService {
   getCars(){
 
     return of(this.mockdata)
-    //return this.http.get('http:localhost:3000/admin/cars')
+    //return this.http.get('http://localhost:3000/admin/cars')
   }
 
   addCar(carsdetail: any){
     //mock
     this.mockdata.push(carsdetail);
     //real
-    return this.http.post('http:localhost:3000/admin/cars',carsdetail);
+    return this.http.post('http://localhost:3000/admin/cars',carsdetail);
   }
-
+     
   updateCar(carDetail: any){
     let carIndex = this.mockdata.findIndex(x=>x.id == carDetail.id);
     this.mockdata[carIndex] = carDetail;

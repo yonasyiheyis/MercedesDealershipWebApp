@@ -18,12 +18,10 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
-import { HeaderComponent } from './header.component';
-import { ViewinventoryComponent } from './viewinventory.component';
 
 
 @NgModule({
-  declarations: [AppComponent, AdminComponent, AddComponent, SignupComponent, LoginComponent,HomeComponent, EditComponent, HeaderComponent, ViewinventoryComponent],
+  declarations: [AppComponent, AdminComponent, AddComponent, SignupComponent, LoginComponent,HomeComponent, EditComponent],
   imports: [
     HttpClientModule,
     RouterModule.forRoot([{path:'',component:HomeComponent},
