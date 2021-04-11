@@ -1,5 +1,6 @@
-<h1>Add Car</h1>
-<form class="example-form" [formGroup]='carForm' (ngSubmit)='addCar()'>
+
+<h1>Edit Car</h1>
+<form class="example-form" [formGroup]='carForm' (ngSubmit)='updateCar()'>
     <p>
       <mat-form-field appearance="outline">
         <mat-label>brand</mat-label>
@@ -73,5 +74,5 @@
       </mat-form-field>
     </p>
   
-    <button mat-raised-button color="primary" type='submit' [disabled]='carForm.invalid' >AddCar</button>
+    <button mat-raised-button color="primary" type='submit' [disabled]='carForm.invalid' >Update</button>
   </form>

@@ -1,9 +1,9 @@
 <div class="admin-page-container">
 
     <div class="add-car">   
-         <a mat-raised-button color="primary" [routerLink]="['/addcar']">Add Cars</a>
+         <a mat-raised-button color="primary" [routerLink]="['/add']">Add Cars</a>
     </div>
-       
+      
   <div class="car-list">
     <div class="car-image"></div>
     <div class="car-detail"></div>
@@ -17,7 +17,7 @@
 
     </div>
     <div class="car-detail">
-
+           
         <p>price:{{car.price}}</p>
         <p>year:{{car.year}} 
             </p>
@@ -27,10 +27,10 @@
           
     <div class="car-action">
             
-        <button mat-raised-button color="primary" >Update</button>
-
+        <button mat-raised-button color="primary" [routerLink]="['/edit']" [state] ="{body:car}" >Edit</button>
+            
         <button mat-raised-button color="warning" >Delete</button>
-
+       
     </div>
   </div>
 </div>
