@@ -1,8 +1,5 @@
 const { ObjectID } = require("bson")
 
-const cars = [{ id: 1, name: "Asaad Saad", course: "CS572", picture: "1570286884.jpg", grade: 95 },
-{ id: 2, name: "volks", course: "CS572", picture: "1570286884.jpg", grade: 95 },
-{ id: 3, name: "ferrari", course: "CS572", picture: "1570286884.jpg", grade: 95 }]
 
 module.exports.getAll = async function (req, res) {
     req.DB.collection('cars').find({}).limit(10).toArray((err, data) =>{
