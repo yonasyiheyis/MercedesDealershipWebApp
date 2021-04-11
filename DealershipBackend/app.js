@@ -25,7 +25,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-const Port = process.env.PORT || 5000
 
 
 

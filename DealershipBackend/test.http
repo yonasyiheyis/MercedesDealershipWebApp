@@ -45,18 +45,15 @@ content-type: application/json
 DELETE http://localhost:3000/clear HTTP/1.1
 
 ###
-POST http://localhost:5000/auth/signin 
+POST http://localhost:3000/auth/signin 
 content-type: application/json
 
 {
-
-    "password": "ssaammyy"
+"email": "abebe@gmail.com",
+    "password": "aabeebbee"
   }
 
-    "name": {"sam"},
-    "email":{"sam@gmail.com"},
-    "password":{"sami"}
-}
+  
 
 ###
 
@@ -75,10 +72,10 @@ content-type: application/json
 
    
 ###
-GET http://localhost:5000/users
+GET http://localhost:3000/users
 
 ###
-GET http://localhost:5000/admin/
+GET http://localhost:3000/admin/
 
 
 ###

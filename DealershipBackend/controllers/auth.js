@@ -14,12 +14,14 @@ module.exports.login = async function (req, res) {
         // }
 
         console.log(req.body.email)
-        req.DB.collection('users').findOne({email:req.body.email},(err, user) => {
+        req.DB.collection('users').findOne({email:req.body.email,password:req.body.password},(err, user) => {
             if (err) {
               console.log(err)    
-            } else {           
+            } else { 
+                console.log("useer ...." + user)          
               if (!user){
-            return    res.status(401).send({"success" : 0})
+                  console.log("useer ...." + user)
+            return    res.status(200).send({"success" : 0})
                
               }else{
                 const token = jwt.sign({email:user.email},"token",{
