@@ -8,13 +8,14 @@ import { CarService } from '../car.service';
 })
 export class AdminComponent implements OnInit {
   public carsList = [];
-
-  constructor(public service: CarService) {}
+  cars;
+  subscription;
+  constructor(private data: CarService) {}
 
   ngOnInit() {
-    this.service.getCars().subscribe((data) => {
-      console.log(data);
-      //this.carsList = data
+    this.subscription = this.data.getCars().subscribe((response) => {
+      this.cars = response;
+      console.log(this.cars);
     });
   }
 }
