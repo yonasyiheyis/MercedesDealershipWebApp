@@ -1,0 +1,60 @@
+<h1>Proceed to Checkout</h1>
+<form class="paymentForm" [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>full_Name</mat-label>
+      <input
+        matInput
+        placeholder="00"
+        formControlName="full_Name"
+        type="string"
+      />
+      <mat-hint>Enter full_Name</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>billing_Address</mat-label>
+      <input
+        matInput
+        placeholder=""
+        formControlName="billing_Address"
+        type="string"
+      />
+      <mat-hint>Enter billing_Address</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>card_Number</mat-label>
+      <input
+        matInput
+        placeholder="00"
+        formControlName="card_number"
+        type="number"
+      />
+      <mat-hint>Enter card_number</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>expired_date</mat-label>
+      <input
+        matInput
+        placeholder="00"
+        formControlName="expired_date"
+        type="number"
+      />
+      <mat-hint>Enter expired_date</mat-hint>
+    </mat-form-field>
+  </p>
+
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="paymentForm.invalid"
+  >
+    pay
+  </button>
+</form>

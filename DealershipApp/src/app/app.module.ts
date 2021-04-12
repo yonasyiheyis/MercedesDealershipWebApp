@@ -24,9 +24,13 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
 import { ViewinventoryComponent } from './viewinventory.component';
+<<<<<<< HEAD
+import { PaymentComponent } from './payment/payment.component';
+=======
 import { FooterComponent } from './footer/footer.component';
 
 
+>>>>>>> 6044cd32fd2559f91412a08246905114d0c4f318
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +53,11 @@ import { FooterComponent } from './footer/footer.component';
       { path: 'admin', component: AdminComponent },
       { path: 'add', component: AddComponent },
       { path: 'edit', component: EditComponent },
+<<<<<<< HEAD
+      { path: 'pay', component: PaymentComponent },
+=======
 
+>>>>>>> 6044cd32fd2559f91412a08246905114d0c4f318
     ]),
     BrowserModule,
     BrowserAnimationsModule,

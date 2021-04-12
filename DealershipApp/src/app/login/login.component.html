@@ -1,27 +1,39 @@
-          <h3>LogIn Form</h3>
-    <p>Haven't account with us ,please signup first!</p>
+<div class="container">
+  <h3>LogIn Form</h3>
+  <p>Haven't account with us ,please signup first!</p>
 
-<form class="example-form" [formGroup]='loginForm' (ngSubmit)='logIn()'>
+  <form class="example-form" [formGroup]="loginForm" (ngSubmit)="logIn()">
     <p>
       <mat-form-field appearance="outline">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="00" formControlName='email' type="email">       
+        <input matInput placeholder="00" formControlName="email" type="email" />
         <mat-hint>Enter Email</mat-hint>
       </mat-form-field>
     </p>
-          
+
     <p>
-        <mat-form-field appearance="outline">
-          <mat-label>password</mat-label>
-          <input matInput placeholder="00" formControlName='password' type="password">       
-          <mat-hint>Enter password</mat-hint>
-        </mat-form-field>
-      </p>
-     
-  
-    <button mat-raised-button color="primary" type='submit' [disabled]='loginForm.invalid' >Login</button>
+      <mat-form-field appearance="outline">
+        <mat-label>password</mat-label>
+        <input
+          matInput
+          placeholder="00"
+          formControlName="password"
+          type="password"
+        />
+        <mat-hint>Enter password</mat-hint>
+      </mat-form-field>
+    </p>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="loginForm.invalid"
+    >
+      Login
+    </button>
   </form>
-   
+
   <h3>Sign Up Form</h3>
   <a mat-raised-button color="primary" [routerLink]="['/signup']">register</a>
-
+</div>
