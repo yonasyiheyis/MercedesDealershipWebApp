@@ -1,0 +1,39 @@
+youtube-player {
+    
+    float: right;
+   
+}
+.list {
+    float: left;
+    color: white;
+
+}
+
+.whrs{
+   
+    color: white;
+    padding-left: 300px;
+    
+}
+footer{
+    
+    background-color:black;
+    color: white;
+}
+span{
+   
+    color: white;
+}
+mat-toolbar {
+    background-color: black;
+}
+mat-toolbar{
+padding-left: 200px;
+}
+a{
+    color: darkblue;
+}
+span + span {
+    margin-left: 200px;
+    padding-bottom: 10px;
+}

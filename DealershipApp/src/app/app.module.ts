@@ -8,6 +8,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import {MatToolbarModule} from '@angular/material/toolbar'; 
+import { MatListModule } from '@angular/material/list';
+
 
 import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
@@ -19,6 +23,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
 import { ViewinventoryComponent } from './viewinventory.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +35,9 @@ import { ViewinventoryComponent } from './viewinventory.component';
     HomeComponent,
     EditComponent,
     ViewinventoryComponent,
+   
+    FooterComponent,
+    
   ],
   imports: [
     HttpClientModule,
@@ -49,6 +57,9 @@ import { ViewinventoryComponent } from './viewinventory.component';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    MatToolbarModule,
+    YouTubePlayerModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
