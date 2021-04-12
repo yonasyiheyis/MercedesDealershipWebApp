@@ -13,7 +13,7 @@ var adminRouter = require("./routes/admin");
 var authRouter = require("./routes/auth");
 
 const uri =
-  "mongodb+srv://yonas:hiwi@cluster0.jizzk.mongodb.net/myDataBase?retryWrites=true&w=majority";
+  "mongodb+srv://yonas:mwap@cluster0.jizzk.mongodb.net/mydb?retryWrites=true&w=majority";
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
