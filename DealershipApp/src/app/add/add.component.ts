@@ -32,6 +32,7 @@ export class AddComponent implements OnInit {
   async addCar() {
     console.log(this.carForm.value);
     this.service.addCar(this.carForm.value).subscribe((data) => {
+      console.log(data)
       /*  onSubmit(){
     this.subscription = this.data.postCars(this.carsForm.value).subscribe(response=>
       alert("successful submitted"))

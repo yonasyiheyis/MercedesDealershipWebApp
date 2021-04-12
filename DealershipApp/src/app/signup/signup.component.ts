@@ -1,29 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { CarService } from '../car.service';
+import { Router } from '@angular/router';
+import { UserService } from '../user.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  styleUrls: ['./signup.component.css'],
 })
-export class SignupComponent implements OnInit {
-
-  signupForm :any;
+export class SignupComponent {
+  signupForm: any;
   subscription;
-  constructor(private formBuilder: FormBuilder ,private data : CarService) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private data: UserService,
+    public route: Router
+  ) {
     this.signupForm = this.formBuilder.group({
-      'firstName': ['', Validators.required],
-      'lastName': ['', Validators.required],
-      'email': ['', Validators.required],
-      'password': ['', Validators.required],     
-      'address': ['', Validators.required],
-      
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required],
+      address: ['', Validators.required],
     });
   }
 
-  ngOnInit(){
-  }
-   signUp(){
-
+  signUp() {
+    this.subscription = this.data.postsignUp(this.signupForm.value).subscribe(
+      (response) => {
+        this.route.navigate(['/login']);
+      },
+      (error) => alert(error['msg'])
+    );
   }
 }
