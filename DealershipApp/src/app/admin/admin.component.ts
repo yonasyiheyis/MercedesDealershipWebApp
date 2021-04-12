@@ -4,20 +4,17 @@ import { CarService } from '../car.service';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css']
+  styleUrls: ['./admin.component.css'],
 })
 export class AdminComponent implements OnInit {
+  public carsList = [];
 
-  public carsList=[]
+  constructor(public service: CarService) {}
 
-  constructor(public service:CarService) { }
-
-  ngOnInit(): void {
-    this.service.getCars().subscribe((cars:any)=>{
-
-      this.carsList = cars
-
-    })
+  ngOnInit() {
+    this.service.getCars().subscribe((data) => {
+      console.log(data);
+      //this.carsList = data
+    });
   }
-    
 }
