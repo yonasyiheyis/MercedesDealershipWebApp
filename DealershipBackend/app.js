@@ -13,7 +13,7 @@ var adminRouter = require('./routes/admin');
 var authRouter = require('./routes/auth')
 
 
-const uri = "mongodb+srv://sami:<password>@cluster0.jizzk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const uri = "mongodb+srv://yonas:mwaprojectyonas@cluster0.jizzk.mongodb.net/Dealership?retryWrites=true&w=majority"
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
@@ -24,6 +24,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+const Port = process.env.PORT || 3000
 
 
 
