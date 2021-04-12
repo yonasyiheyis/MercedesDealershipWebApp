@@ -24,6 +24,7 @@ import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
 import { ViewinventoryComponent } from './viewinventory.component';
 import { FooterComponent } from './footer/footer.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -34,10 +35,9 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     HomeComponent,
     EditComponent,
-    ViewinventoryComponent,
-   
+    ViewinventoryComponent, 
     FooterComponent,
-    
+    PaymentComponent,
   ],
   imports: [
     HttpClientModule,
