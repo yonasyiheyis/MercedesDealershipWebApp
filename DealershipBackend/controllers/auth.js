@@ -11,6 +11,7 @@ module.exports.login = async function (req, res) {
 
   // }
 
+
   console.log(req.body.email);
   req.DB.collection("users").findOne({ email: req.body.email }, (err, user) => {
     if (err) {
@@ -26,6 +27,7 @@ module.exports.login = async function (req, res) {
         finalObj = { success: 1, role: user.role, token: token };
         res.status(200).send(finalObj);
       }
+
     }
   });
 };
