@@ -8,7 +8,7 @@ import { MatCardModule } from '@angular/material/card';
         class="viewanc"
         mat-raised-button
         color="primary"
-        [routerLink]="['/login']"
+        [routerLink]="['login']"
         >view inventory</a
       >
     </div>

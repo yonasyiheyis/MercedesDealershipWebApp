@@ -20,7 +20,6 @@ import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
 import { ViewinventoryComponent } from './viewinventory.component';
 import { PaymentComponent } from './payment/payment.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +41,7 @@ import { PaymentComponent } from './payment/payment.component';
       { path: 'admin', component: AdminComponent },
       { path: 'add', component: AddComponent },
       { path: 'edit', component: EditComponent },
+      { path: 'pay', component: PaymentComponent },
     ]),
     BrowserModule,
     BrowserAnimationsModule,
