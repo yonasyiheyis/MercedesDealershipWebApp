@@ -1,44 +1,71 @@
-<h3>Sign Up Form</h3>
-<form class="example-form" [formGroup]='signupForm' (ngSubmit)='signUp()'>
+<div class="container">
+  <h3>Sign Up Form</h3>
+  <form class="example-form" [formGroup]="signupForm" (ngSubmit)="signUp()">
     <p>
       <mat-form-field appearance="outline">
         <mat-label>firstName</mat-label>
-        <input matInput placeholder="00" formControlName='firstName' type="string">       
+        <input
+          matInput
+          placeholder="00"
+          formControlName="firstName"
+          type="string"
+        />
         <mat-hint>Enter firstName</mat-hint>
       </mat-form-field>
     </p>
     <p>
-        <mat-form-field appearance="outline">
-          <mat-label>lastName</mat-label>
-          <input matInput placeholder="" formControlName='lastName' type="string">       
-          <mat-hint>Enter lastName</mat-hint>
-        </mat-form-field>
-      </p>
-      <p>
-        <mat-form-field appearance="outline">
-          <mat-label>Email</mat-label>
-          <input matInput placeholder="00" formControlName='email' type="email">       
-          <mat-hint>Enter Email</mat-hint>
-        </mat-form-field>
-      </p>
-     
-      <p>
-          <mat-form-field appearance="outline">
-            <mat-label>password</mat-label>
-            <input matInput placeholder="00" formControlName='password' type="password">       
-            <mat-hint>Enter password</mat-hint>
-          </mat-form-field>
-        </p>
-       
-      <p>
-        <mat-form-field appearance="outline">
-          <mat-label>address</mat-label>
-          <input matInput placeholder="00" formControlName='address' type="string">       
-          <mat-hint>Enter address</mat-hint>
-        </mat-form-field>
-      </p>   
-      
-    
-  
-    <button mat-raised-button color="primary" type='submit' [disabled]='signupForm.invalid' >AddCar</button>
+      <mat-form-field appearance="outline">
+        <mat-label>lastName</mat-label>
+        <input
+          matInput
+          placeholder=""
+          formControlName="lastName"
+          type="string"
+        />
+        <mat-hint>Enter lastName</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="00" formControlName="email" type="email" />
+        <mat-hint>Enter Email</mat-hint>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>password</mat-label>
+        <input
+          matInput
+          placeholder="00"
+          formControlName="password"
+          type="password"
+        />
+        <mat-hint>Enter password</mat-hint>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>address</mat-label>
+        <input
+          matInput
+          placeholder="00"
+          formControlName="address"
+          type="string"
+        />
+        <mat-hint>Enter address</mat-hint>
+      </mat-form-field>
+    </p>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="signupForm.invalid"
+    >
+      AddCar
+    </button>
   </form>
+</div>
