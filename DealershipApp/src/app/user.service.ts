@@ -20,4 +20,5 @@ export class UserService {
   getToken() {
     return localStorage.getItem('token');
   }
+  addPayment() {}
 }

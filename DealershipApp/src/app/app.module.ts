@@ -19,6 +19,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
 import { ViewinventoryComponent } from './viewinventory.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ViewinventoryComponent } from './viewinventory.component';
     HomeComponent,
     EditComponent,
     ViewinventoryComponent,
+    PaymentComponent,
   ],
   imports: [
     HttpClientModule,
