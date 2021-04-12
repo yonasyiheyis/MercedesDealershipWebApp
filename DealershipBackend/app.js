@@ -15,6 +15,8 @@ var authRouter = require("./routes/auth");
 const uri =
   "mongodb+srv://yonas:mwap@cluster0.jizzk.mongodb.net/mydb?retryWrites=true&w=majority";
 
+//const uri = "mongodb+srv://sami:<password>@cluster0.jizzk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
