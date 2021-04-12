@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
 //angular material modules
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -24,7 +25,7 @@ import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
 import { ViewinventoryComponent } from './viewinventory.component';
 import { FooterComponent } from './footer/footer.component';
-import { PaymentComponent } from './payment/payment.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { PaymentComponent } from './payment/payment.component';
     EditComponent,
     ViewinventoryComponent, 
     FooterComponent,
-    PaymentComponent,
+  
   ],
   imports: [
     HttpClientModule,
@@ -48,6 +49,7 @@ import { PaymentComponent } from './payment/payment.component';
       { path: 'admin', component: AdminComponent },
       { path: 'add', component: AddComponent },
       { path: 'edit', component: EditComponent },
+
     ]),
     BrowserModule,
     BrowserAnimationsModule,
@@ -57,9 +59,11 @@ import { PaymentComponent } from './payment/payment.component';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+
     MatToolbarModule,
     YouTubePlayerModule,
     MatListModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
