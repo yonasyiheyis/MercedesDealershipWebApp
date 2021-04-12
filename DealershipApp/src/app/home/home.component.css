@@ -4,22 +4,15 @@
     height: 100vh;
      align-items: center;
 } */
-.home h1{
-    
-    color: rgb(17, 69, 224);
+.home h1 {
+  color: rgb(17, 69, 224);
 }
-.home a{
-     width: 150px;
-     height: 700px;
-     align-items: center;
-     margin-right: 0px;
-     margin-left: 0px;
+.home a {
+  width: 150px;
+  height: 700px;
+  align-items: center;
+  margin-right: 0px;
+  margin-left: 0px;
 }
-.button{
-    width: 100px;
-    align-items: center;
-     margin: auto;
-    
+.button {
 }
-
-

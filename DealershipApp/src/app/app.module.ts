@@ -18,19 +18,29 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
-
+import { ViewinventoryComponent } from './viewinventory.component';
 
 @NgModule({
-  declarations: [AppComponent, AdminComponent, AddComponent, SignupComponent, LoginComponent,HomeComponent, EditComponent],
+  declarations: [
+    AppComponent,
+    AdminComponent,
+    AddComponent,
+    SignupComponent,
+    LoginComponent,
+    HomeComponent,
+    EditComponent,
+    ViewinventoryComponent,
+  ],
   imports: [
     HttpClientModule,
-    RouterModule.forRoot([{path:'',component:HomeComponent},
-    {path:'login',component:LoginComponent},
-    {path:'signup',component:SignupComponent},
-    {path:'admin',component:AdminComponent},
-    {path:'add',component:AddComponent},
-    {path:'edit',component:EditComponent},
-  ]),
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'signup', component: SignupComponent },
+      { path: 'admin', component: AdminComponent },
+      { path: 'add', component: AddComponent },
+      { path: 'edit', component: EditComponent },
+    ]),
     BrowserModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
@@ -43,6 +53,4 @@ import { EditComponent } from './edit/edit.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {
-
-}
+export class AppModule {}
