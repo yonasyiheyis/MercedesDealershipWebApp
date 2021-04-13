@@ -10,14 +10,18 @@ import { UserService } from '../user.service';
 export class PaymentComponent implements OnInit {
   paymentForm: any;
   subscription;
+  car;
   constructor(
     private formBuilder: FormBuilder,
-    private userservice: UserService,
+    private data: UserService,
     public route: Router
-  ) { }
+  ) {
+    this.car = history.state.data
+  }
   ngOnInit(){
     this.paymentForm = this.formBuilder.group({
-      full_Name: ['', Validators.required],
+     
+      name: ['', Validators.required],
       card_Number: ['', Validators.required],
       expired_date: ['', Validators.required],
       billing_Address: ['', Validators.required],
@@ -27,16 +31,14 @@ export class PaymentComponent implements OnInit {
   }
     //this.car = this.route.getCurrentNavigation().extras.state.body;
 
-    
 
-  async onSubmit() {
-    console.log("onsubmit")
-    console.log("formvalue payment" +this.paymentForm.value)
-    this.userservice
-      .addPayment(this.paymentForm.value)
+  onSubmit() {
+    this.subscription = this.data
+
+      .addPayment(this.paymentForm.value, this.car)
       .subscribe((response) => {
-        console.log(response);
-
+        console.log(this.car);
+        console.log(this.paymentForm.value);
         alert('pay sucessfuly!!');
         this.route.navigate(['/view']);
 

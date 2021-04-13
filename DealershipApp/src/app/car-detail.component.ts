@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'car-detail',
@@ -37,6 +38,7 @@ import { Router } from '@angular/router';
         <br /><br /><br />
         <div class="price">Price: {{ car.price }}</div>
 
+
       <div class="buy">
         <mat-card-actions>
           <button mat-raised-button color="accent" (click)="pay()">Proceed To Checkout</button>
@@ -45,6 +47,7 @@ import { Router } from '@angular/router';
       
    </mat-card-content>
    <!--
+
    <mat-card-actions>
       <button mat-button>LIKE</button>
       <button mat-button>SHARE</button>
@@ -63,10 +66,15 @@ import { Router } from '@angular/router';
 export class CarDetailComponent {
   @Input() car;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private userService: UserService) { }
 
   pay() {
-    this.router.navigate(['/pay'], { state: { data: this.car } });
+    if (this.userService.getToken() != null) {
+      this.router.navigate(['/pay'], { state: { data: this.car } });
+    } else {
+      this.router.navigate(['/login']);
+    }
+
   }
 
 }
