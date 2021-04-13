@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
@@ -9,6 +9,8 @@ import { UserService } from '../user.service';
 })
 export class PaymentComponent {
   car;
+
+
   paymentForm: any;
   subscription;
   constructor(
@@ -18,6 +20,10 @@ export class PaymentComponent {
   ) {
     this.car = history.state.data;
 
+
+
+
+
     this.paymentForm = this.formBuilder.group({
       email: ['', Validators.required],
       name: ['', Validators.required],
@@ -25,16 +31,25 @@ export class PaymentComponent {
       expired_date: ['', Validators.required],
       billing_Address: ['', Validators.required],
     });
+  
   }
+
+
+    
+
 
   onSubmit() {
     this.subscription = this.data
+
       .addPayment(this.paymentForm.value, this.car)
       .subscribe((response) => {
         console.log(this.car);
-        console.log(this.paymentForm.value);
+        console.log(this.paymentForm.value); 
+
+
         alert('pay sucessfuly!!');
         this.route.navigate(['/view']);
+
       });
   }
 }

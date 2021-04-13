@@ -2,6 +2,7 @@
   <h1>Proceed to Checkout</h1>
   <form class="example-form" [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
     <p>
+      
       <mat-form-field appearance="outline">
         <mat-label>name</mat-label>
         <input matInput placeholder="" formControlName="name" type="string" />
@@ -20,6 +21,7 @@
         <mat-hint>Enter card_Number</mat-hint>
       </mat-form-field>
     </p>
+
 
     <p>
       <mat-form-field appearance="outline">
@@ -48,7 +50,9 @@
     <p>
       <mat-form-field appearance="outline">
         <mat-label> email</mat-label>
+
         <input matInput placeholder="" formControlName="email" type="string" />
+
         <mat-hint>Enter email</mat-hint>
       </mat-form-field>
     </p>
@@ -56,7 +60,7 @@
       mat-raised-button
       color="primary"
       type="submit"
-      [disabled]="paymentForm.invalid"
+      [disabled]="paymentForm.disabled"
     >
       pay
     </button>
