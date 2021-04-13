@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CarService } from '../car.service';
 @Component({
   selector: 'app-add',
@@ -8,9 +9,11 @@ import { CarService } from '../car.service';
 })
 export class AddComponent implements OnInit {
   public carForm: any;
-  constructor(public fb: FormBuilder, public service: CarService) {
-    
-  }
+  constructor(
+    public fb: FormBuilder,
+    public service: CarService,
+    public route: Router
+  ) {}
 
   ngOnInit() {
     this.carForm = this.fb.group({
@@ -32,6 +35,9 @@ export class AddComponent implements OnInit {
   async addCar() {
     console.log(this.carForm.value);
     this.service.addCar(this.carForm.value).subscribe((data) => {
+      console.log(data);
+      this.route.navigate(['/admin']);
+
       /*  onSubmit(){
     this.subscription = this.data.postCars(this.carsForm.value).subscribe(response=>
       alert("successful submitted"))

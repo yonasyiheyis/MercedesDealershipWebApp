@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-//angular material modules
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //angular material modules
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
@@ -22,19 +23,37 @@ import { EditComponent } from './edit/edit.component';
 import { HeaderComponent } from './header.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { CarDetailComponent } from './car-detail.component';
+import { ViewinventoryComponent } from './viewinventory.component';
 
+import { FooterComponent } from './footer/footer.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
-  declarations: [AppComponent, AdminComponent, AddComponent, SignupComponent, LoginComponent, HomeComponent, EditComponent, HeaderComponent, InventoryComponent, CarDetailComponent],
+  declarations: [
+    AppComponent,
+    AdminComponent,
+    AddComponent,
+    SignupComponent,
+    LoginComponent,
+    HomeComponent,
+    EditComponent,
+    ViewinventoryComponent,
+    FooterComponent,
+    PaymentComponent,
+    HeaderComponent,
+    InventoryComponent,
+    CarDetailComponent,
+  ],
   imports: [
     HttpClientModule,
-    RouterModule.forRoot([{ path: '', component: HomeComponent },
-    { path: 'login', component: LoginComponent },
-    { path: 'signup', component: SignupComponent },
-    { path: 'admin', component: AdminComponent },
-    { path: 'add', component: AddComponent },
-    { path: 'edit', component: EditComponent },
-    { path: 'view', component: InventoryComponent },
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'signup', component: SignupComponent },
+      { path: 'admin', component: AdminComponent },
+      { path: 'add', component: AddComponent },
+      { path: 'edit', component: EditComponent },
+      { path: 'pay', component: PaymentComponent },
     ]),
     BrowserModule,
     BrowserAnimationsModule,
@@ -45,10 +64,11 @@ import { CarDetailComponent } from './car-detail.component';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
+    MatToolbarModule,
+    YouTubePlayerModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {
-
-}
+export class AppModule { }

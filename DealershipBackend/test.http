@@ -45,14 +45,15 @@ content-type: application/json
 DELETE http://localhost:3000/clear HTTP/1.1
 
 ###
-POST http://localhost:3000/signup HTTP/1.1
+POST http://localhost:3000/auth/signin 
 content-type: application/json
 
 {
-    "name": {"sam"},
-    "email":{"sam@gmail.com"},
-    "password":{"sami"}
-}
+"email": "abebe@gmail.com",
+    "password": "aabeebbee"
+  }
+
+  
 
 ###
 
@@ -68,21 +69,26 @@ content-type: application/json
     "address": "54th ST"
 }
  
+
    
+###
+GET http://localhost:3000/users
+
 ###
 GET http://localhost:3000/admin/
 
-###
-GET http://localhost:3000/admin/60723bf80ecac8bd463ffce5
-
-
 
 ###
-POST http://localhost:3000/signin  HTTP/1.1
+GET http://localhost:5000/admin/60723bf80ecac8bd463ffce5
+
+
+
+###
+POST http://localhost:5000/signin  HTTP/1.1
 content-type: application/json
 
 { "_id": 3, "name": "Keith" } 
 ###
 
 ###
-DELETE http://localhost:3000/admin/60724748e622882db858dda3           HTTP/1.1
+DELETE http://localhost:5000/admin/:60723acc0ecac8bd463ffce4           HTTP/1.1
