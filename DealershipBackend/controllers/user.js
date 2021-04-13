@@ -9,7 +9,6 @@ module.exports.getusers = async function (req, res) {
     .toArray((err, data) => {
       console.log(data);
       res.json(data);
-      // let listofcars = getAllCars()
     });
 };
 
@@ -22,7 +21,6 @@ module.exports.addUser = async function (req, res) {
 
 module.exports.pay = async function (req, res) {
   console.log("payment.......");
-  //  const id = new ObjectID(req.body.car_id)
 
   console.log("email" + req.body.payment.email);
   req.DB.collection("users").findOne(
@@ -57,13 +55,9 @@ module.exports.pay = async function (req, res) {
               console.log(error);
             } else {
               console.log("Email sent: " + info.response);
-              //
-
-              //
             }
           });
-          //
-          //
+
           const id = new ObjectID(req.body.car_id);
 
           console.log("delete by id car" + id);
@@ -71,7 +65,6 @@ module.exports.pay = async function (req, res) {
             console.log(data);
             return res.json({ success: 1, deleted: 1, emailsent: 1 });
           });
-          //
         }
       }
     }
