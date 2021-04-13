@@ -30,8 +30,6 @@ export class AddComponent implements OnInit {
     });
   }
 
-  title = 'DealershipApp';
-
   async addCar() {
     console.log(this.carForm.value);
     this.service.addCar(this.carForm.value).subscribe((data) => {

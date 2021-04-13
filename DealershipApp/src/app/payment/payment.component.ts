@@ -36,7 +36,10 @@ export class PaymentComponent implements OnInit {
       .addPayment(this.paymentForm.value)
       .subscribe((response) => {
         console.log(response);
-       // this.route.navigate(['/view']);
+
+        alert('pay sucessfuly!!');
+        this.route.navigate(['/view']);
+
       });
   }
 }
