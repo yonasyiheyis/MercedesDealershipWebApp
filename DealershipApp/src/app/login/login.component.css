@@ -4,9 +4,8 @@
   align-items: center;
   max-width: 100% !important;
   width: 100% !important;
-
   height: 100vh;
   flex-direction: column;
-  background-color: rgba(0, 255, 255, 0.993);
+  background-color: rgba(250, 235, 215, 0.479);
   -moz-text-decoration-color: rgb(240, 248, 255);
 }

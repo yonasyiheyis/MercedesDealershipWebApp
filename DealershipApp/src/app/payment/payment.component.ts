@@ -22,6 +22,7 @@ export class PaymentComponent {
       card_Number: ['', Validators.required],
       expired_date: ['', Validators.required],
       billing_Address: ['', Validators.required],
+      email: ['', Validators.required],
     });
   }
 
