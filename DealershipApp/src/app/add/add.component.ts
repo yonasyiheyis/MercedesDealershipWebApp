@@ -37,12 +37,6 @@ export class AddComponent implements OnInit {
     this.service.addCar(this.carForm.value).subscribe((data) => {
       console.log(data);
       this.route.navigate(['/admin']);
-
-      /*  onSubmit(){
-    this.subscription = this.data.postCars(this.carsForm.value).subscribe(response=>
-      alert("successful submitted"))
-      this.route.navigate(['/cars/get'])
-  } */
     });
   }
 }
