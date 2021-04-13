@@ -6,6 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
@@ -19,7 +20,9 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
-import { ViewinventoryComponent } from './viewinventory.component';
+import { HeaderComponent } from './header.component';
+import { InventoryComponent } from './inventory/inventory.component';
+import { CarDetailComponent } from './car-detail.component';
 
 import { FooterComponent } from './footer/footer.component';
 import { PaymentComponent } from './payment/payment.component';
@@ -33,9 +36,11 @@ import { PaymentComponent } from './payment/payment.component';
     LoginComponent,
     HomeComponent,
     EditComponent,
-    ViewinventoryComponent,
     FooterComponent,
     PaymentComponent,
+    HeaderComponent,
+    InventoryComponent,
+    CarDetailComponent,
   ],
   imports: [
     HttpClientModule,
@@ -47,6 +52,7 @@ import { PaymentComponent } from './payment/payment.component';
       { path: 'add', component: AddComponent },
       { path: 'edit', component: EditComponent },
       { path: 'pay', component: PaymentComponent },
+      { path: 'view', component: InventoryComponent },
     ]),
     BrowserModule,
     BrowserAnimationsModule,
@@ -56,6 +62,7 @@ import { PaymentComponent } from './payment/payment.component';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    MatCardModule,
     MatToolbarModule,
     YouTubePlayerModule,
     MatListModule,
@@ -63,4 +70,4 @@ import { PaymentComponent } from './payment/payment.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
