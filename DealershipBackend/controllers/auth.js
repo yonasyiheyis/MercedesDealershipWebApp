@@ -10,10 +10,11 @@ module.exports.login = async function (req, res) {
   // return    res.status(400).send('all fields are required')
 
   // }
-
+  const pass = require('crypto').createHash('sha1').update(req.body.password).digest('base64');
+  req.body.password = pass
 
   console.log(req.body.email);
-  req.DB.collection("users").findOne({ email: req.body.email }, (err, user) => {
+  req.DB.collection("users").findOne({ email: req.body.email, password: req.body.password }, (err, user) => {
     if (err) {
       console.log(err);
     } else {
