@@ -38,9 +38,9 @@ import { Component, Input, OnInit } from '@angular/core';
 
         <div class="buy">
           <mat-card-actions>
-            <a mat-raised-button color="accent" [routerLink]="['/pay']"
-              >Proceed To Checkout</a
-            >
+            <button mat-raised-button color="accent">
+              Proceed To Checkout
+            </button>
           </mat-card-actions>
         </div>
       </mat-card-content>
