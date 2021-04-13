@@ -18,18 +18,21 @@ export class PaymentComponent implements OnInit {
   ) {
     this.car = history.state.data
   }
-  ngOnInit(){
+  ngOnInit() {
     this.paymentForm = this.formBuilder.group({
-     
+
       name: ['', Validators.required],
       card_Number: ['', Validators.required],
       expired_date: ['', Validators.required],
       billing_Address: ['', Validators.required],
       email: ['', Validators.required],
     });
-  
+
   }
-    //this.car = this.route.getCurrentNavigation().extras.state.body;
+  //this.car = this.route.getCurrentNavigation().extras.state.body;
+
+
+
 
 
   onSubmit() {
