@@ -30,6 +30,8 @@ export class PaymentComponent {
       .addPayment(this.paymentForm.value)
       .subscribe((response) => {
         console.log(response);
+        alert('pay sucessfuly!!');
+        this.route.navigate(['/view']);
       });
   }
 }
