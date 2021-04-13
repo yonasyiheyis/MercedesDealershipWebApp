@@ -8,9 +8,8 @@ import { CarService } from '../car.service';
 })
 export class AdminComponent implements OnInit {
   public cars;
-
   subscription;
-  constructor(private data: CarService) { }
+  constructor(private data: CarService) {}
 
   ngOnInit() {
     this.subscription = this.data.getCars().subscribe((response) => {

@@ -6,14 +6,13 @@ import { of } from 'rxjs';
   providedIn: 'root',
 })
 export class CarService {
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient) {}
 
   getCars() {
     return this.http.get('http://localhost:3000/admin');
   }
 
   addCar(carsdetail: any) {
-    //real
     return this.http.post('http://localhost:3000/admin/cars', carsdetail);
   }
 
@@ -22,8 +21,6 @@ export class CarService {
   }
 
   deleteCar(car: Object) {
-    //real
     return this.http.post('http://localhost:3000/admin', car);
   }
-
 }

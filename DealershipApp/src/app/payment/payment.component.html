@@ -2,62 +2,46 @@
   <h1>Proceed to Checkout</h1>
   <form class="example-form" [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
     <p>
+
       <mat-form-field appearance="outline">
-        <mat-label> full_Name</mat-label>
-        <input
-          matInput
-          placeholder=""
-          formControlName=" full_Name"
-          type="string"
-        />
+        <mat-label> name </mat-label>
+        <input matInput placeholder="" formControlName="name" type="string" />
         <mat-hint>Enter name</mat-hint>
       </mat-form-field>
     </p>
     <p>
       <mat-form-field appearance="outline">
         <mat-label> card_Number</mat-label>
-        <input
-          matInput
-          placeholder=""
-          formControlName="card_Number"
-          type="string"
-        />
+        <input matInput placeholder="" formControlName="card_Number" type="string" />
         <mat-hint>Enter card_Number</mat-hint>
       </mat-form-field>
     </p>
-    <p></p>
+
 
     <p>
       <mat-form-field appearance="outline">
         <mat-label> expired_date</mat-label>
-        <input
-          matInput
-          placeholder=""
-          formControlName="expired_date"
-          type="string"
-        />
+        <input matInput placeholder="" formControlName="expired_date" type="string" />
         <mat-hint>Enter expired_date</mat-hint>
       </mat-form-field>
     </p>
     <p>
       <mat-form-field appearance="outline">
         <mat-label> billing_Address</mat-label>
-        <input
-          matInput
-          placeholder=""
-          formControlName="billing_Address"
-          type="string"
-        />
+        <input matInput placeholder="" formControlName="billing_Address" type="string" />
         <mat-hint>Enter billing_Address</mat-hint>
       </mat-form-field>
     </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label> email</mat-label>
 
-    <button
-      mat-raised-button
-      color="primary"
-      type="submit"
-      [disabled]="paymentForm.invalid"
-    >
+        <input matInput placeholder="" formControlName="email" type="string" />
+
+        <mat-hint>Enter email</mat-hint>
+      </mat-form-field>
+    </p>
+    <button mat-raised-button color="primary" type="submit" [disabled]="paymentForm.disabled">
       pay
     </button>
   </form>
