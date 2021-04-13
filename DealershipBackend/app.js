@@ -12,7 +12,7 @@ var usersRouter = require("./routes/users");
 var adminRouter = require("./routes/admin");
 var authRouter = require("./routes/auth");
 
-const uri = "";
+const uri = "mongodb+srv://sami:mwaprojectsami@cluster0.jizzk.mongodb.net/Dealership?retryWrites=true&w=majority";
 
 
 
