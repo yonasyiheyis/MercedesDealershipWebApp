@@ -23,7 +23,6 @@ import { EditComponent } from './edit/edit.component';
 import { HeaderComponent } from './header.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { CarDetailComponent } from './car-detail.component';
-import { ViewinventoryComponent } from './viewinventory.component';
 
 import { FooterComponent } from './footer/footer.component';
 import { PaymentComponent } from './payment/payment.component';
@@ -37,7 +36,6 @@ import { PaymentComponent } from './payment/payment.component';
     LoginComponent,
     HomeComponent,
     EditComponent,
-    ViewinventoryComponent,
     FooterComponent,
     PaymentComponent,
     HeaderComponent,
@@ -54,6 +52,7 @@ import { PaymentComponent } from './payment/payment.component';
       { path: 'add', component: AddComponent },
       { path: 'edit', component: EditComponent },
       { path: 'pay', component: PaymentComponent },
+      { path: 'view', component: InventoryComponent },
     ]),
     BrowserModule,
     BrowserAnimationsModule,

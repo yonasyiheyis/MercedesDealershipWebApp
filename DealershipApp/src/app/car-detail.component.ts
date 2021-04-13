@@ -60,25 +60,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CarDetailComponent implements OnInit {
 
-  // public car = {
-  //   id: 1,
-  //   brand: 'Mercedes',
-  //   model: 'c400d',
-  //   price: '45000',
-  //   year: '2018',
-  //   type: 'sedan',
-  //   engine: '2L I4',
-  //   transmission: 'automatic',
-  //   color: 'red',
-  //   mpg: 25,
-  //   pictureUrl: "https://www.renderhub.com/bug-irl/mercedes-benz-c-class-2019/mercedes-benz-c-class-2019.jpg"
-  // }
-
   @Input() car = {}
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
