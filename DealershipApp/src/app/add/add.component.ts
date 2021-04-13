@@ -14,7 +14,6 @@ export class AddComponent implements OnInit {
     public service: CarService,
     public route: Router
   ) {}
-
   ngOnInit() {
     this.carForm = this.fb.group({
       brand: ['', Validators.required],

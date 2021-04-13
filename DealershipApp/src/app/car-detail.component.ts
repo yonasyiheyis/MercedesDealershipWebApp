@@ -37,15 +37,15 @@ import { Router } from '@angular/router';
         <br /><br /><br />
         <div class="price">Price: {{ car.price }}</div>
 
-
-      <div class="buy">
-        <mat-card-actions>
-          <button mat-raised-button color="accent" (click)="pay()">Proceed To Checkout</button>
-        </mat-card-actions>
-      </div>
-      
-   </mat-card-content>
-   <!--
+        <div class="buy">
+          <mat-card-actions>
+            <button mat-raised-button color="accent" (click)="pay()">
+              Proceed To Checkout
+            </button>
+          </mat-card-actions>
+        </div>
+      </mat-card-content>
+      <!--
 
    <mat-card-actions>
       <button mat-button>LIKE</button>
@@ -64,11 +64,9 @@ import { Router } from '@angular/router';
 })
 export class CarDetailComponent {
   @Input() car;
-
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   pay() {
     this.router.navigate(['/pay'], { state: { data: this.car } });
   }
-
 }
