@@ -41,18 +41,28 @@ content-type: application/json
 
 ###
 
-//DELETE http://localhost:7000/users/2
-DELETE http://localhost:3000/clear HTTP/1.1
+
 
 ###
 POST http://localhost:3000/auth/signin 
 content-type: application/json
 
 {
-"email": "abebe@gmail.com",
-    "password": "aabeebbee"
+"email": "samueltesfai41@gmail.com",
+    "password": "mmaarriiee"
   }
 
+
+###
+POST http://localhost:3000/users/pay 
+content-type: application/json
+
+{
+     "car_id": "60723cf70ecac8bd463ffce7",
+  "model"   :"e300",
+"email": "samueltesfai41@gmail.com",
+    "password": "mmaarriiee"
+  }
   
 
 ###
@@ -63,7 +73,7 @@ content-type: application/json
 {
     "firstName": "marie",
     "lastName": "curie",
-    "email": "marie@gmail.com",
+    "email": "samueltesfai41@gmail.com",
     "password": "mmaarriiee",
     "role": "client",
     "address": "54th ST"
