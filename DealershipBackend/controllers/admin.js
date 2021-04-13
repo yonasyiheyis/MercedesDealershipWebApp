@@ -7,7 +7,9 @@ module.exports.addCar = async function (req, res) {
 
 module.exports.updateCar = async function (req, res) {
 
-    var query = { model: req.body.model };
+    const id = new ObjectID(req.body._id)
+    console.log(id + ": " + req.body._id)
+    var query = { _id: id };
     var newvalues = {
         $set: {
             brand: req.body.brand,
@@ -33,7 +35,7 @@ const { ObjectID } = require("bson")
 
 module.exports.getAll = async function (req, res) {
     req.DB.collection('cars').find({}).limit(10).toArray((err, data) => {
-        console.log(data)
+        //console.log(data)
         res.json(data)
         // let listofcars = getAllCars()
     })
@@ -68,6 +70,18 @@ module.exports.deleteById = async function (req, res) {
             res.json(data);
         }
 
-    )}
- 
+    )
+}
 
+
+module.exports.deleteCar = async function (req, res) {
+    const id = new ObjectID(req.body._id)
+    console.log(req.body._id, ": ", id)
+    req.DB.collection('cars').deleteOne({ _id: id },
+        (err, data) => {
+            if (err) throw err;
+            res.json({ 'ok': `Deleted car ${req.body.model}` });
+        }
+
+    )
+}

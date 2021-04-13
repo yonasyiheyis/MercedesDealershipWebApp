@@ -8,36 +8,44 @@ import { CarService } from '../car.service';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
-  carForm: any;  
-  car: any;
+  carForm;
+  car;
+  subscription;
 
-  constructor(public ed:FormBuilder,public service:CarService, public route: Router) {
-    this.car = this.route.getCurrentNavigation().extras.state.body;
+  constructor(public ed: FormBuilder, public service: CarService, public route: Router) {
+    //this.car = this.route.getCurrentNavigation().extras.state.body;
     //this.carForm.brand = this.car.brand;
-    console.log("Edit car: ", this.car);
-
-   }
-  ngOnInit(): void {
-    this.carForm = this.ed.group({
-      brand:['Hiwi',Validators.required],  
-      model:['',Validators.required] ,  
-      type:['',Validators.required],
-      year:['',Validators.required] ,
-      price:['',Validators.compose([Validators.required,Validators.min(0)])],
-      engine:['',Validators.required],
-      transmission:['',Validators.required],
-      color:['',Validators.required],
-      mpg:['',Validators.required],
-      pictureUrl:['',Validators.required]
-  })
-
-  console.log("Form", this.carForm);
+    this.car = history.state.data
+    console.log("Id is: " + this.car._id)
 
   }
-  
-  public updateCar(): void{
-    this.service.updateCar(this.carForm.value);
-    this.route.navigate(['/admin'])
+  ngOnInit(): void {
+    this.carForm = this.ed.group({
+      brand: [this.car.brand, Validators.required],
+      model: [this.car.model, Validators.required],
+      type: [this.car.type, Validators.required],
+      year: [this.car.year, Validators.required],
+      price: [this.car.price, Validators.compose([Validators.required, Validators.min(0)])],
+      engine: [this.car.engine, Validators.required],
+      transmission: [this.car.transmission, Validators.required],
+      color: [this.car.color, Validators.required],
+      mpg: [this.car.mpg, Validators.required],
+      pictureUrl: [this.car.pictureUrl, Validators.required]
+    })
+
+    console.log("Form", this.carForm);
+
+  }
+
+  public updateCar() {
+    this.carForm.value._id = this.car._id
+    this.subscription = this.service.updateCar(this.carForm.value).subscribe(
+      (response) => {
+        this.route.navigate(['/admin']);
+        alert(response)
+      },
+      (error) => alert(error['msg'])
+    );
   }
 
 }

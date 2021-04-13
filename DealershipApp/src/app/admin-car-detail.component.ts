@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CarService } from './car.service';
 
 @Component({
   selector: 'admin-car-detail',
@@ -37,8 +39,8 @@ import { Component, Input, OnInit } from '@angular/core';
 
        <div class="buy">
          <mat-card-actions>
-           <button mat-raised-button color="accent">Update</button>
-           <button mat-raised-button color="warn">Delete</button>
+           <button mat-raised-button color="accent" (click)="update()">Update</button>
+           <button mat-raised-button color="warn" (click)="delete()">Delete</button>
          </mat-card-actions>
        </div>
      
@@ -62,7 +64,23 @@ import { Component, Input, OnInit } from '@angular/core';
 export class AdminCarDetailComponent {
 
   @Input() car;
+  subscription;
 
-  constructor() { }
+  constructor(private router: Router, private service: CarService) {
+  }
+
+  delete() {
+    this.subscription = this.service.deleteCar(this.car).subscribe(
+      (response) => {
+        this.router.navigate(['/login']);
+        alert(response)
+      },
+      (error) => alert(error['msg'])
+    );
+  }
+
+  update() {
+    this.router.navigate(['/edit'], { state: { data: this.car } });
+  }
 
 }
