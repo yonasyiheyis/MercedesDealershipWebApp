@@ -12,7 +12,7 @@ export class PaymentComponent {
   subscription;
   constructor(
     private formBuilder: FormBuilder,
-    private data: UserService,
+    private userservice: UserService,
     public route: Router
   ) {
     //this.car = this.route.getCurrentNavigation().extras.state.body;
@@ -26,7 +26,7 @@ export class PaymentComponent {
   }
 
   onSubmit() {
-    this.subscription = this.data
+    this.subscription = this.userservice
       .addPayment(this.paymentForm.value)
       .subscribe((response) => {
         console.log(response);

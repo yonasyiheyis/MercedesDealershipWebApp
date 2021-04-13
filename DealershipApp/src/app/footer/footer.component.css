@@ -6,7 +6,7 @@ youtube-player {
 .list {
     float: left;
     color: white;
-
+     padding-left: 9px;
 }
 
 .whrs{
@@ -31,9 +31,17 @@ mat-toolbar{
 padding-left: 200px;
 }
 a{
-    color: darkblue;
+    color: darkgoldenrod;
+    font-size: x-large;
+    padding-left: 10px;
+}
+.loc{
+    padding-left: 10px;
 }
 span + span {
     margin-left: 200px;
     padding-bottom: 10px;
+}
+.home{
+    padding-left: 70px;
 }

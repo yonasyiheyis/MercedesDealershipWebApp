@@ -14,10 +14,11 @@ var authRouter = require("./routes/auth");
 
 const uri = "";
 
-const client = new MongoClient(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+
+
+
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+
 
 var app = express();
 app.use(cors());
