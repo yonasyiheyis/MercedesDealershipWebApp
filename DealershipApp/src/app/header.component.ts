@@ -15,7 +15,7 @@ import { Component, OnInit } from '@angular/core';
     </div>
     -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="sasd">
     <img class="mercLogo" src="../assets/merc-logo.png"/>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@ import { Component, OnInit } from '@angular/core';
     // '.nav {display: inline;}',
     // 'div {background-color: coral; height: 105px}',
     'img.mercLogo {height: 80px;}',
-    'nav {background-color: #7a0000;}',
+    'nav {background-color: #ffffff;}',
     '#welcome {font-size: 50px;}',
     //'#navigation,.navbar .navbar-default{background-image: url("img/flower.jpg");}'
     // 'p {width: 100px; height: 100px; font-size: 25px; margin-right: 300px}'

@@ -7,15 +7,15 @@ import { CarService } from '../car.service';
   styleUrls: ['./admin.component.css'],
 })
 export class AdminComponent implements OnInit {
-  public carsList;
+  public cars;
 
   subscription;
-  constructor(private data: CarService) {}
+  constructor(private data: CarService) { }
 
   ngOnInit() {
     this.subscription = this.data.getCars().subscribe((response) => {
-      this.carsList = response;
-      console.log(this.carsList);
+      this.cars = response;
+      console.log(this.cars);
     });
   }
 }
