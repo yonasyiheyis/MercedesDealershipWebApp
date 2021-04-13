@@ -3,14 +3,14 @@
   <form class="example-form" [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
     <p>
       <mat-form-field appearance="outline">
-        <mat-label>full_Name</mat-label>
+        <mat-label> full_Name</mat-label>
         <input
           matInput
           placeholder=""
-          formControlName="full_Name"
+          formControlName=" full_Name"
           type="string"
         />
-        <mat-hint>Enter full_Name</mat-hint>
+        <mat-hint>Enter name</mat-hint>
       </mat-form-field>
     </p>
     <p>
@@ -19,7 +19,7 @@
         <input
           matInput
           placeholder=""
-          formControlName=" card_Number"
+          formControlName="card_Number"
           type="string"
         />
         <mat-hint>Enter card_Number</mat-hint>
@@ -33,7 +33,7 @@
         <input
           matInput
           placeholder=""
-          formControlName="  expired_date"
+          formControlName="expired_date"
           type="string"
         />
         <mat-hint>Enter expired_date</mat-hint>
@@ -45,7 +45,7 @@
         <input
           matInput
           placeholder=""
-          formControlName="  billing_Address"
+          formControlName="billing_Address"
           type="string"
         />
         <mat-hint>Enter billing_Address</mat-hint>
