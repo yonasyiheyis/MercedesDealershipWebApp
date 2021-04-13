@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'car-detail',
@@ -37,7 +38,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
       <div class="buy">
         <mat-card-actions>
-          <button mat-raised-button color="accent">Proceed To Checkout</button>
+          <button mat-raised-button color="accent" (click)="pay()">Proceed To Checkout</button>
         </mat-card-actions>
       </div>
       
@@ -62,6 +63,10 @@ export class CarDetailComponent {
 
   @Input() car;
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  pay() {
+    this.router.navigate(['/pay'], { state: { data: this.car } });
+  }
 
 }
