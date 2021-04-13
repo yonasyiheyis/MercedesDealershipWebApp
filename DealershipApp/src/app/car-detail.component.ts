@@ -38,15 +38,15 @@ import { UserService } from './user.service';
         <br /><br /><br />
         <div class="price">Price: {{ car.price }}</div>
 
-
-      <div class="buy">
-        <mat-card-actions>
-          <button mat-raised-button color="accent" (click)="pay()">Proceed To Checkout</button>
-        </mat-card-actions>
-      </div>
-      
-   </mat-card-content>
-   <!--
+        <div class="buy">
+          <mat-card-actions>
+            <button mat-raised-button color="accent" (click)="pay()">
+              Proceed To Checkout
+            </button>
+          </mat-card-actions>
+        </div>
+      </mat-card-content>
+      <!--
 
    <mat-card-actions>
       <button mat-button>LIKE</button>
@@ -76,5 +76,4 @@ export class CarDetailComponent {
     }
 
   }
-
 }

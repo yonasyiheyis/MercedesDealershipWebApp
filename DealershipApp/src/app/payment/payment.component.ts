@@ -7,7 +7,9 @@ import { UserService } from '../user.service';
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.css'],
 })
-export class PaymentComponent implements OnInit {
+export class PaymentComponent {
+
+
   paymentForm: any;
   subscription;
   car;
@@ -16,11 +18,13 @@ export class PaymentComponent implements OnInit {
     private data: UserService,
     public route: Router
   ) {
-    this.car = history.state.data
-  }
-  ngOnInit() {
-    this.paymentForm = this.formBuilder.group({
+    this.car = history.state.data;
 
+
+
+
+
+    this.paymentForm = this.formBuilder.group({
       name: ['', Validators.required],
       card_Number: ['', Validators.required],
       expired_date: ['', Validators.required],
@@ -29,8 +33,6 @@ export class PaymentComponent implements OnInit {
     });
 
   }
-  //this.car = this.route.getCurrentNavigation().extras.state.body;
-
 
 
 
