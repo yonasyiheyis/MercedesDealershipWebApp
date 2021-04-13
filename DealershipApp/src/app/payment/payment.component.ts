@@ -8,11 +8,11 @@ import { UserService } from '../user.service';
   styleUrls: ['./payment.component.css'],
 })
 export class PaymentComponent {
-  car;
 
 
   paymentForm: any;
   subscription;
+  car;
   constructor(
     private formBuilder: FormBuilder,
     private data: UserService,
@@ -25,17 +25,16 @@ export class PaymentComponent {
 
 
     this.paymentForm = this.formBuilder.group({
-      email: ['', Validators.required],
       name: ['', Validators.required],
       card_Number: ['', Validators.required],
       expired_date: ['', Validators.required],
       billing_Address: ['', Validators.required],
+      email: ['', Validators.required],
     });
-  
+
   }
 
 
-    
 
 
   onSubmit() {
@@ -44,9 +43,7 @@ export class PaymentComponent {
       .addPayment(this.paymentForm.value, this.car)
       .subscribe((response) => {
         console.log(this.car);
-        console.log(this.paymentForm.value); 
-
-
+        console.log(this.paymentForm.value);
         alert('pay sucessfuly!!');
         this.route.navigate(['/view']);
 

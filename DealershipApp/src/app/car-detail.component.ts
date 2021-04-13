@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'car-detail',
@@ -64,9 +65,15 @@ import { Router } from '@angular/router';
 })
 export class CarDetailComponent {
   @Input() car;
-  constructor(private router: Router) {}
+
+  constructor(private router: Router, private userService: UserService) { }
 
   pay() {
-    this.router.navigate(['/pay'], { state: { data: this.car } });
+    if (this.userService.getToken() != null) {
+      this.router.navigate(['/pay'], { state: { data: this.car } });
+    } else {
+      this.router.navigate(['/login']);
+    }
+
   }
 }

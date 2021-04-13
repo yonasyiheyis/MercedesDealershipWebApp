@@ -21,7 +21,6 @@ export class LoginComponent {
       password: ['', Validators.required],
     });
   }
-
   logIn() {
     this.subscription = this.service.getUser(this.loginForm.value).subscribe(
       (response) => {
@@ -31,7 +30,7 @@ export class LoginComponent {
           if (response['role'] === 'admin') {
             this.route.navigate(['/admin']);
           } else {
-            this.route.navigate(['/signup']);
+            this.route.navigate(['/view']);
           }
         } else {
           alert('wrong password/email');
