@@ -13,7 +13,7 @@ var adminRouter = require("./routes/admin");
 var authRouter = require("./routes/auth");
 
 
-const uri = "mongodb+srv://sami:mwaprojectsami@cluster0.jizzk.mongodb.net/Dealership?retryWrites=true&w=majority"
+const uri = ""
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
