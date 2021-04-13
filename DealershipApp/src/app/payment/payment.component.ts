@@ -12,27 +12,28 @@ export class PaymentComponent implements OnInit {
   subscription;
   constructor(
     private formBuilder: FormBuilder,
-    private userservice: UserService,
+    private data: UserService,
     public route: Router
   ) { }
   ngOnInit(){
     this.paymentForm = this.formBuilder.group({
+      email: ['', Validators.required],
       full_Name: ['', Validators.required],
       card_Number: ['', Validators.required],
       expired_date: ['', Validators.required],
       billing_Address: ['', Validators.required],
-      email: ['', Validators.required],
     });
   
   }
     //this.car = this.route.getCurrentNavigation().extras.state.body;
 
+
     
 
-  async onSubmit() {
-    console.log("onsubmit")
-    console.log("formvalue payment" +this.paymentForm.value)
-    this.userservice
+
+  onSubmit() {
+    this.subscription = this.data
+
       .addPayment(this.paymentForm.value)
       .subscribe((response) => {
         console.log(response);
