@@ -20,5 +20,7 @@ export class UserService {
   getToken() {
     return localStorage.getItem('token');
   }
-  addPayment() {}
+  addPayment(body) {
+    return this.http.post(`http://localhost:3000/user/pay`, body);
+  }
 }
