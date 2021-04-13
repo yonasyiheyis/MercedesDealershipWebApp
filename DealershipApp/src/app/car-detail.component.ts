@@ -58,14 +58,10 @@ import { Component, Input, OnInit } from '@angular/core';
     'div.props {float: left; margin-right: 65px; font-family: "Courier New", monospace;}',
   ]
 })
-export class CarDetailComponent implements OnInit {
+export class CarDetailComponent {
 
-  @Input() car = {}
+  @Input() car;
 
   constructor() { }
-
-  ngOnInit(): void {
-
-  }
 
 }

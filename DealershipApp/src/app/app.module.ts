@@ -26,6 +26,7 @@ import { CarDetailComponent } from './car-detail.component';
 
 import { FooterComponent } from './footer/footer.component';
 import { PaymentComponent } from './payment/payment.component';
+import { AdminCarDetailComponent } from './admin-car-detail.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { PaymentComponent } from './payment/payment.component';
     HeaderComponent,
     InventoryComponent,
     CarDetailComponent,
+    AdminCarDetailComponent,
   ],
   imports: [
     HttpClientModule,
