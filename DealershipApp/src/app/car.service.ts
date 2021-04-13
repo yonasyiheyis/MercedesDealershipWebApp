@@ -9,7 +9,6 @@ export class CarService {
   constructor(public http: HttpClient) { }
 
   getCars() {
-    //return of(this.mockdata)
     return this.http.get('http://localhost:3000/admin');
   }
 

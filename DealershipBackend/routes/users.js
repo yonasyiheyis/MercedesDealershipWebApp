@@ -6,7 +6,7 @@ const userController = require('../controllers/user')
 
 router.get('/', userController.getusers);
 
-
+router.post('/pay', userController.pay);
 
 router.post('/add/', userController.addUser)
 

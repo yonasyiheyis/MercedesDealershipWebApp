@@ -12,7 +12,7 @@ export class PaymentComponent {
   subscription;
   constructor(
     private formBuilder: FormBuilder,
-    private data: UserService,
+    private userservice: UserService,
     public route: Router
   ) {
     //this.car = this.route.getCurrentNavigation().extras.state.body;
@@ -22,14 +22,17 @@ export class PaymentComponent {
       card_Number: ['', Validators.required],
       expired_date: ['', Validators.required],
       billing_Address: ['', Validators.required],
+      email: ['', Validators.required],
     });
   }
 
   onSubmit() {
-    this.subscription = this.data
+    this.subscription = this.userservice
       .addPayment(this.paymentForm.value)
       .subscribe((response) => {
         console.log(response);
+        alert('pay sucessfuly!!');
+        this.route.navigate(['/view']);
       });
   }
 }
