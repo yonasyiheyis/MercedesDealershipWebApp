@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'header',
@@ -25,7 +27,8 @@ import { Component, OnInit } from '@angular/core';
       <ul class="navbar-nav mr-auto">
       </ul>
       <form class="form-inline my-2 my-lg-0">
-       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log In</button>
+       <button *ngIf="show" class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="toLogin()">Log In</button>
+       <button *ngIf="signup" class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="toSignup()">Sign Up</button>
       </form>
       </div>
     </nav>
@@ -40,11 +43,26 @@ import { Component, OnInit } from '@angular/core';
     // 'p {width: 100px; height: 100px; font-size: 25px; margin-right: 300px}'
   ]
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
-  constructor() { }
+  show = true
+  signup = false
 
-  ngOnInit(): void {
+  constructor(private router: Router, private service: UserService) {
+    if (this.service.getToken() != null) {
+      console.log("Here is the token: " + this.service.getToken())
+      this.show = false
+    } else {
+      this.signup = true
+    }
+  }
+
+  toLogin() {
+    this.router.navigate(['/login']);
+  }
+
+  toSignup() {
+    this.router.navigate(['/signup']);
   }
 
 }

@@ -27,6 +27,7 @@ import { CarDetailComponent } from './car-detail.component';
 import { FooterComponent } from './footer/footer.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AdminCarDetailComponent } from './admin-car-detail.component';
+import { HomeBodyComponent } from './home-body.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { AdminCarDetailComponent } from './admin-car-detail.component';
     InventoryComponent,
     CarDetailComponent,
     AdminCarDetailComponent,
+    HomeBodyComponent,
   ],
   imports: [
     HttpClientModule,
