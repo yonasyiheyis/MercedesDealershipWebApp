@@ -11,7 +11,7 @@ export class InventoryComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
 
     this.cars = [{
       id: 1,
