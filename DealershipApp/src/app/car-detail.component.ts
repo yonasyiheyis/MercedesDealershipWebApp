@@ -37,6 +37,7 @@ import { Router } from '@angular/router';
         <br /><br /><br />
         <div class="price">Price: {{ car.price }}</div>
 
+
       <div class="buy">
         <mat-card-actions>
           <button mat-raised-button color="accent" (click)="pay()">Proceed To Checkout</button>
@@ -45,6 +46,7 @@ import { Router } from '@angular/router';
       
    </mat-card-content>
    <!--
+
    <mat-card-actions>
       <button mat-button>LIKE</button>
       <button mat-button>SHARE</button>
