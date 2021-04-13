@@ -8,7 +8,7 @@ import { UserService } from '../user.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   loginForm: any;
   subscription;
   constructor(
@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required],
     });
   }
-  ngOnInit() {}
+
   logIn() {
     this.subscription = this.service.getUser(this.loginForm.value).subscribe(
       (response) => {

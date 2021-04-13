@@ -7,25 +7,32 @@ import { UserService } from '../user.service';
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.css'],
 })
-export class PaymentComponent implements OnInit {
+export class PaymentComponent {
+  car;
+
+
   paymentForm: any;
   subscription;
   constructor(
     private formBuilder: FormBuilder,
     private data: UserService,
     public route: Router
-  ) { }
-  ngOnInit(){
+  ) {
+    this.car = history.state.data;
+
+
+
+
+
     this.paymentForm = this.formBuilder.group({
       email: ['', Validators.required],
-      full_Name: ['', Validators.required],
+      name: ['', Validators.required],
       card_Number: ['', Validators.required],
       expired_date: ['', Validators.required],
       billing_Address: ['', Validators.required],
     });
   
   }
-    //this.car = this.route.getCurrentNavigation().extras.state.body;
 
 
     
@@ -34,9 +41,11 @@ export class PaymentComponent implements OnInit {
   onSubmit() {
     this.subscription = this.data
 
-      .addPayment(this.paymentForm.value)
+      .addPayment(this.paymentForm.value, this.car)
       .subscribe((response) => {
-        console.log(response);
+        console.log(this.car);
+        console.log(this.paymentForm.value); 
+
 
         alert('pay sucessfuly!!');
         this.route.navigate(['/view']);
