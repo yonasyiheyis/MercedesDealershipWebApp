@@ -8,3 +8,10 @@
   flex-direction: column;
   background-color: rgba(250, 235, 215, 0.479);
 }
+
+h3 {
+  font-family: "Courier New", monospace;
+  font-weight: 900;
+  color:orangered;
+  font-size: 20px;
+}

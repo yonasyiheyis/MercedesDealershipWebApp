@@ -9,3 +9,10 @@
 mat-form-field {
     width: 400px;
 }
+
+h1 {
+  font-family: "Courier New", monospace;
+  font-weight: 900;
+  color:orangered;
+  font-size: 20px;
+}

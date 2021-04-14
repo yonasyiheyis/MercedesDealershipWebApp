@@ -42,8 +42,8 @@ export class EditComponent implements OnInit {
     this.carForm.value._id = this.car._id;
     this.subscription = this.service.updateCar(this.carForm.value).subscribe(
       (response) => {
+        alert("Updated Successfully!");
         this.route.navigate(['/admin']);
-        alert(response);
       },
       (error) => alert(error['msg'])
     );

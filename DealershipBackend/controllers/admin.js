@@ -34,7 +34,7 @@ const { ObjectID } = require("bson")
 
 
 module.exports.getAll = async function (req, res) {
-    req.DB.collection('cars').find({}).limit(10).toArray((err, data) => {
+    req.DB.collection('cars').find({}).toArray((err, data) => {
         //console.log(data)
         res.json(data)
         // let listofcars = getAllCars()

@@ -42,7 +42,7 @@ module.exports.pay = async function (req, res) {
           auth: {
             service: 'gmail',
             user: 'yshmercedes@gmail.com',
-            pass: '!'
+            pass: ''
           }
         });
         const mailOptions = {
