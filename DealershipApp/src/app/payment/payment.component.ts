@@ -19,6 +19,7 @@ export class PaymentComponent {
     public route: Router
   ) {
     this.car = history.state.data;
+    console.log("inside payment comp")
 
 
 

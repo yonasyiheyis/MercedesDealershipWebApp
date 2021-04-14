@@ -59,14 +59,8 @@ import { AdminGuard } from './admin.guard';
       { path: 'admin', component: AdminComponent, canActivate: [AdminGuard] },
       { path: 'add', component: AddComponent, canActivate: [AdminGuard] },
       { path: 'edit', component: EditComponent, canActivate: [AdminGuard] },
-      //{ path: 'pay', component: PaymentComponent, canActivate: [ClientGuard] },
-      {
-        path: 'view', component: InventoryComponent,
-        children: [
-          { path: 'pay', component: PaymentComponent },
-        ],
-        canActivate: [ClientGuard]
-      },
+      { path: 'view', component: InventoryComponent, canActivateChild: [ClientGuard] },
+      { path: 'pay', component: PaymentComponent, canActivate: [ClientGuard] },
       { path: '**', component: HomeComponent },
     ]),
     BrowserModule,
