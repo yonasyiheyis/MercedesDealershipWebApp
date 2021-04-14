@@ -8,8 +8,6 @@ import { UserService } from '../user.service';
   styleUrls: ['./payment.component.css'],
 })
 export class PaymentComponent {
-
-
   paymentForm: any;
   subscription;
   car;
@@ -19,11 +17,6 @@ export class PaymentComponent {
     public route: Router
   ) {
     this.car = history.state.data;
-
-
-
-
-
     this.paymentForm = this.formBuilder.group({
       name: ['', Validators.required],
       card_Number: ['', Validators.required],
@@ -31,11 +24,7 @@ export class PaymentComponent {
       billing_Address: ['', Validators.required],
       email: ['', Validators.required],
     });
-
   }
-
-
-
 
   onSubmit() {
     this.subscription = this.data
@@ -46,7 +35,6 @@ export class PaymentComponent {
         console.log(this.paymentForm.value);
         alert('pay sucessfuly!!');
         this.route.navigate(['/view']);
-
       });
   }
 }
