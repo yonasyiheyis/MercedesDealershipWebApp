@@ -70,7 +70,7 @@ export class CarDetailComponent {
 
   pay() {
     if (this.userService.getToken() != null) {
-      this.router.navigate(['/pay'], { state: { data: this.car } });
+      this.router.navigate(['pay'], { state: { data: this.car } });
     } else {
       this.router.navigate(['/login']);
     }

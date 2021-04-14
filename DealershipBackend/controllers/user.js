@@ -35,7 +35,6 @@ module.exports.pay = async function (req, res) {
       if (!users) {
         return res.status(200).send({ success: 0 });
       } else {
-        console.log("Email sent: " + info.response);
         //
 
         const transporter = nodemailer.createTransport({
@@ -46,7 +45,7 @@ module.exports.pay = async function (req, res) {
           auth: {
             service: 'gmail',
             user: 'yshmercedes@gmail.com',
-            pass: '!'
+            pass: 'mercedes123!'
           }
         });
         const mailOptions = {

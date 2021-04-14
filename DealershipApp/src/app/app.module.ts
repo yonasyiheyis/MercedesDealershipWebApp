@@ -28,6 +28,9 @@ import { FooterComponent } from './footer/footer.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AdminCarDetailComponent } from './admin-car-detail.component';
 import { HomeBodyComponent } from './home-body.component';
+import { AddCarComponent } from './add-car.component';
+import { ClientGuard } from './client.guard';
+import { AdminGuard } from './admin.guard';
 
 @NgModule({
   declarations: [
@@ -45,6 +48,7 @@ import { HomeBodyComponent } from './home-body.component';
     CarDetailComponent,
     AdminCarDetailComponent,
     HomeBodyComponent,
+    AddCarComponent,
   ],
   imports: [
     HttpClientModule,
@@ -52,11 +56,18 @@ import { HomeBodyComponent } from './home-body.component';
       { path: '', component: HomeComponent },
       { path: 'login', component: LoginComponent },
       { path: 'signup', component: SignupComponent },
-      { path: 'admin', component: AdminComponent },
-      { path: 'add', component: AddComponent },
-      { path: 'edit', component: EditComponent },
-      { path: 'pay', component: PaymentComponent },
-      { path: 'view', component: InventoryComponent },
+      { path: 'admin', component: AdminComponent, canActivate: [AdminGuard] },
+      { path: 'add', component: AddComponent, canActivate: [AdminGuard] },
+      { path: 'edit', component: EditComponent, canActivate: [AdminGuard] },
+      //{ path: 'pay', component: PaymentComponent, canActivate: [ClientGuard] },
+      {
+        path: 'view', component: InventoryComponent,
+        children: [
+          { path: 'pay', component: PaymentComponent },
+        ],
+        canActivate: [ClientGuard]
+      },
+      { path: '**', component: HomeComponent },
     ]),
     BrowserModule,
     BrowserAnimationsModule,
