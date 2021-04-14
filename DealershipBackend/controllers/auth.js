@@ -5,11 +5,7 @@ const jwt = require("jsonwebtoken");
 
 module.exports.login = async function (req, res) {
   console.log("auth entered");
-  // if (!req.body.email||!req.body.password){
 
-  // return    res.status(400).send('all fields are required')
-
-  // }
   const pass = require('crypto').createHash('sha1').update(req.body.password).digest('base64');
   req.body.password = pass
 

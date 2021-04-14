@@ -12,8 +12,12 @@ var usersRouter = require("./routes/users");
 var adminRouter = require("./routes/admin");
 var authRouter = require("./routes/auth");
 
-const uri =
-  "mongodb+srv://yonas:mwaprojectyonas@cluster0.jizzk.mongodb.net/Dealership?retryWrites=true&w=majority";
+const uri = "";
+
+const client = new MongoClient(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,

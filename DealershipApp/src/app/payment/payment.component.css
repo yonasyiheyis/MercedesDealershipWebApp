@@ -4,8 +4,13 @@
   align-items: center;
   max-width: 100% !important;
   width: 100% !important;
-  height: 100vh;
+  height: 100v;
   flex-direction: column;
-  background-color: rgba(250, 235, 215, 0.479);
+  background-color: rgba(243, 240, 235, 0.479);
   -moz-text-decoration-color: rgb(240, 248, 255);
+  padding: 20px;
+}
+
+mat-form-field {
+  width: 400px;
 }

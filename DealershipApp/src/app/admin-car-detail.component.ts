@@ -58,7 +58,7 @@ import { CarService } from './car.service';
     </mat-card>
   `,
   styles: [
-    '.tp-card {height: 350px; min-height: 250px; width: 75%; margin: auto; background-color: #CDCDCD;}',
+    '.tp-card {height: 350px; min-height: 250px; width: 75%; margin: auto; background-color: #CDCDCD; background-image: url("/../assets/detail-comp.jpg");}',
     '.mat-card-image {width: 300px; height: 300px; float: left; margin-right: 20px; padding-top: 10px; padding-left: 10px;}',
     'mat-card-content {font-size: 18px;}',
     '.model {color: blue; font-size: 22px; font-weight: bold;}',
@@ -68,7 +68,7 @@ import { CarService } from './car.service';
 export class AdminCarDetailComponent {
   @Input() car;
   subscription;
-  constructor(private router: Router, private service: CarService) {}
+  constructor(private router: Router, private service: CarService) { }
 
   delete() {
     this.subscription = this.service.deleteCar(this.car).subscribe(
