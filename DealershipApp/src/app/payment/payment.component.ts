@@ -18,11 +18,11 @@ export class PaymentComponent {
     private data: UserService,
     public route: Router
   ) {
+
+    const visited = parseInt(localStorage.getItem('visited')) + 1;
+    localStorage.setItem('visited', '' + visited)
+
     this.car = history.state.data;
-
-
-
-
 
     this.paymentForm = this.formBuilder.group({
       name: ['', Validators.required],

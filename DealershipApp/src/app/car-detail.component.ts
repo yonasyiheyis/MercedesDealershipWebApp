@@ -70,6 +70,8 @@ export class CarDetailComponent {
 
   pay() {
     if (this.userService.getToken() != null) {
+      const clicked = parseInt(localStorage.getItem('clicked')) + 1;
+      localStorage.setItem('clicked', '' + clicked)
       this.router.navigate(['pay'], { state: { data: this.car } });
     } else {
       this.router.navigate(['/login']);
