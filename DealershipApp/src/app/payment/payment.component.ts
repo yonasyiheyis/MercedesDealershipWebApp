@@ -43,6 +43,7 @@ export class PaymentComponent {
 
       .addPayment(this.paymentForm.value, this.car)
       .subscribe((response) => {
+        console.log(response['success'] )
         if (response['success'] === 1) {
           alert('pay sucessfuly!!');
           this.route.navigate(['/view']);

@@ -59,8 +59,8 @@ content-type: application/json
 
 {
      "car_id": "60723cf70ecac8bd463ffce7",
-  "model"   :"e300",
-"email": "samueltesfai41@gmail.com",
+  "payment.model"   :"e300",
+"payment.email": "samueltesfai41@gmail.com",
     "password": "mmaarriiee"
   }
   
@@ -71,8 +71,8 @@ POST http://localhost:3000/users/add HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "marie",
-    "lastName": "curie",
+    "firstName": "sammy",
+    "lastName": "tes",
     "email": "samueltesfai41@gmail.com",
     "password": "mmaarriiee",
     "role": "client",
