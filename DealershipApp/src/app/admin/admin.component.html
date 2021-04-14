@@ -1,6 +1,10 @@
-<ul style="list-style-type:none;">
-  <li *ngFor="let car of cars">
-    <admin-car-detail [car]="car"></admin-car-detail>
-    <br>
-  </li>
-</ul>
+<header></header>
+<add-car></add-car>
+<div class="body">
+  <ul style="list-style-type:none;">
+    <li *ngFor="let car of cars">
+      <admin-car-detail [car]="car"></admin-car-detail>
+      <br>
+    </li>
+  </ul>
+</div>
