@@ -19,6 +19,7 @@ export class PaymentComponent {
     public route: Router
   ) {
     this.car = history.state.data;
+    console.log("inside payment comp")
 
 
 
@@ -42,10 +43,13 @@ export class PaymentComponent {
 
       .addPayment(this.paymentForm.value, this.car)
       .subscribe((response) => {
-        console.log(this.car);
-        console.log(this.paymentForm.value);
-        alert('pay sucessfuly!!');
-        this.route.navigate(['/view']);
+        if (response['success'] === 1) {
+          alert('pay sucessfuly!!');
+          this.route.navigate(['/view']);
+        } else {
+          alert('enter payment details first!!');
+          this.route.navigate(['/pay']);
+        }
 
       });
   }

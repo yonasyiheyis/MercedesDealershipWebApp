@@ -30,7 +30,7 @@ module.exports.pay = async function (req, res) {
 
     } else {
       if (!users) {
-        return res.status(200).send({ success: 0 });
+        return res.status(200).send({ "success": 0 });
       } else {
         //
 
@@ -42,7 +42,7 @@ module.exports.pay = async function (req, res) {
           auth: {
             service: 'gmail',
             user: 'yshmercedes@gmail.com',
-            pass: ''
+            pass: '!'
           }
         });
         const mailOptions = {
@@ -90,7 +90,7 @@ module.exports.pay = async function (req, res) {
         req.DB.collection('cars').deleteOne({ _id: id },
           (err, data) => {
             console.log(data);
-            return res.json({ success: 1, deleted: 1, emailsent: 1 });
+            return res.json({ "success": 1, deleted: 1, emailsent: 1 });
           })
         //
       }
