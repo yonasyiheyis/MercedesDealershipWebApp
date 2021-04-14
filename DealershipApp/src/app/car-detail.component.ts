@@ -1,5 +1,6 @@
+import { Conditional } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from './user.service';
 
 @Component({
@@ -66,7 +67,7 @@ import { UserService } from './user.service';
 export class CarDetailComponent {
   @Input() car;
 
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(private router: Router, private route: ActivatedRoute, private userService: UserService) { }
 
   pay() {
     if (this.userService.getToken() != null) {
