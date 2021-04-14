@@ -17,8 +17,8 @@ import { UserService } from './user.service';
     </div>
     -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="background-color: #e3f2fd;">
-    <img class="mercLogo" src="../assets/merc-logo.png"/>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="background-color: #8f8f8a;">
+    <img class="mercLogo" src="../assets/merc-logo.png" (click)="toHome()"/>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -37,7 +37,7 @@ import { UserService } from './user.service';
     // '.nav {display: inline;}',
     // 'div {background-color: coral; height: 105px}',
     'img.mercLogo {height: 80px;}',
-    'nav {background-color: #ffffff;}',
+    'nav {background-color: #e3f2fd;}',
     '#welcome {font-size: 50px;}',
     //'#navigation,.navbar .navbar-default{background-image: url("img/flower.jpg");}'
     // 'p {width: 100px; height: 100px; font-size: 25px; margin-right: 300px}'
@@ -46,13 +46,15 @@ import { UserService } from './user.service';
 export class HeaderComponent {
 
   show = true
-  signup = false
+  signup = true
 
   constructor(private router: Router, private service: UserService) {
     if (this.service.getToken() != null) {
       console.log("Here is the token: " + this.service.getToken())
       this.show = false
+      this.signup = true
     } else {
+      this.show = true
       this.signup = true
     }
   }
@@ -63,6 +65,10 @@ export class HeaderComponent {
 
   toSignup() {
     this.router.navigate(['/signup']);
+  }
+
+  toHome() {
+    this.router.navigate(['/']);
   }
 
 }
