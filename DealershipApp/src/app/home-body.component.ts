@@ -41,7 +41,7 @@ import { Router } from '@angular/router';
   styles: [
     '.tp-card {height: 700px; width: 100%;}',
     'mat-card-content {font-size: 18px;}',
-    'div.props {float: left; margin-left: 100px; font-family: "Courier New", monospace; color: white;}',
+    'div.props {float: left; margin-left: 50px; font-family: "Courier New", monospace; color: white;}',
     'div.viewInv {text-align: center;}',
     'button {width: 300px;}',
     '.firstL {font-size: 50px; font-weight: bold; font-style: italic;}',

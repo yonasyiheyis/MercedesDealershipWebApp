@@ -31,6 +31,7 @@ import { HomeBodyComponent } from './home-body.component';
 import { AddCarComponent } from './add-car.component';
 import { ClientGuard } from './client.guard';
 import { AdminGuard } from './admin.guard';
+import { PaymentGuard } from './payment.guard';
 
 @NgModule({
   declarations: [
@@ -59,8 +60,8 @@ import { AdminGuard } from './admin.guard';
       { path: 'admin', component: AdminComponent, canActivate: [AdminGuard] },
       { path: 'add', component: AddComponent, canActivate: [AdminGuard] },
       { path: 'edit', component: EditComponent, canActivate: [AdminGuard] },
-      { path: 'view', component: InventoryComponent, canActivateChild: [ClientGuard] },
-      { path: 'pay', component: PaymentComponent, canActivate: [ClientGuard] },
+      { path: 'pay', component: PaymentComponent, canActivate: [PaymentGuard] },
+      { path: 'view', component: InventoryComponent, canActivate: [ClientGuard] },
       { path: '**', component: HomeComponent },
     ]),
     BrowserModule,

@@ -25,6 +25,7 @@ export class SignupComponent {
   }
 
   signUp() {
+    this.signupForm.value.role = "client"
     this.subscription = this.data.postsignUp(this.signupForm.value).subscribe(
       (response) => {
         this.route.navigate(['/login']);
