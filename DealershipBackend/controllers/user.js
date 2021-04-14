@@ -23,10 +23,7 @@ module.exports.addUser = async function (req, res) {
 }
 
 module.exports.pay = async function (req, res) {
-  console.log("payment.......")
-  //  const id = new ObjectID(req.body.car_id)
 
-  console.log("email" + req.body.payment.email)
   req.DB.collection('users').findOne({ email: req.body.payment.email }, (err, users) => {
     if (err) {
       console.log(err);
@@ -45,7 +42,7 @@ module.exports.pay = async function (req, res) {
           auth: {
             service: 'gmail',
             user: 'yshmercedes@gmail.com',
-            pass: 'mercedes123!'
+            pass: ''
           }
         });
         const mailOptions = {

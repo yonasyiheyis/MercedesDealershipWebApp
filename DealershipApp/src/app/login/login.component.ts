@@ -27,6 +27,7 @@ export class LoginComponent {
         console.log(response);
         localStorage.setItem('token', response['token']);
         if (response['success'] === 1) {
+          localStorage.setItem('role', response['role']);
           if (response['role'] === 'admin') {
             this.route.navigate(['/admin']);
           } else {
